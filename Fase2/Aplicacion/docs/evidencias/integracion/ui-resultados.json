@@ -1,0 +1,139 @@
+{
+  "url": "http://localhost:5173/comercial",
+  "title": "Aprueba · Consola de administración",
+  "viewport": "1440x1000",
+  "noViteOverlay": true,
+  "errors": [],
+  "consoleMessages": [
+    "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.",
+    "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.",
+    "Warning: Each child in a list should have a unique \"key\" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s \n\nCheck the render method of `Overview`.  \n    at div\n    at Overview (http://localhost:5173/src/pages/Overview.jsx:22:36)\n    at Guard (http://localhost:5173/src/App.jsx:89:18)\n    at RenderedRoute (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4110:5)\n    at Routes (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4580:5)\n    at main\n    at div\n    at div\n    at Layout (http://localhost:5173/src/components/Layout.jsx:54:34)\n    at App (http://localhost:5173/src/App.jsx:44:20)\n    at AuthProvider (http://localhost:5173/src/auth/AuthContext.jsx:22:32)\n    at Router (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4523:15)\n    at BrowserRouter (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:5261:5)",
+    "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.",
+    "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath."
+  ],
+  "responses": [
+    {
+      "path": "/api/v1/admin/auth/login",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/metrics/overview",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/metrics/overview",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/services",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/services",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/sponsors",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/sponsors",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/questions",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/questions",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/users",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/plans",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/plans",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/tickets",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/users",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/corrections",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/tickets",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/corrections",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/features",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/features",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/plans",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/plans",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/auth/login",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/metrics/commercial",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/admin/metrics/commercial",
+      "status": 200
+    }
+  ],
+  "screens": [
+    {
+      "name": "admin-sponsors",
+      "text": "Marcas que financian beneficios para los alumnos.\n\n🤝 Sponsors activos\n2\n💰 Recaudación sponsors\n$3.000/mes\n🎁 Beneficios cobrados\n2\nDetalle de sponsors\n+ Agregar sponsor\nSPONSOR\tNIVEL\tAPORTE MENSUAL\tBENEFICIOS OFRECIDOS\tBENEFICIOS COBRADOS\tESTADO\t\nLibrería ficticia Uno\tGold\t$2.000\t1\t2\tOperativo\t\nEditar\n🗑\n\nMarca ficticia Dos\tSilver\t$1.000\t0\t0\tDegradado\t\nEditar\n🗑\nAporte mensual por sponsor\nLibrería ficticia…\n$2.000\nMarca ficticia Dos\n$1.000"
+    },
+    {
+      "name": "admin-structured-question",
+      "text": "Nueva pregunta\n✕\nPrueba *\nlectora · m1 · m2 · cien · hist · b1\nEje *\nDificultad\n—\nD1\nD2\nD3\nD4\nEstado\nBorrador\nPublicada\nMarcada\nRetirada\nToda pregunta nueva nace como borrador; publícala editándola.\nEnunciado *\nALTERNATIVAS\n\nPulsa la letra para marcar la alternativa correcta.\n\nA\nB\nC\nD\nE\nFormato de explicación\nTexto\nEstructurada\nExplicación de la respuesta\nTítulo *\nMateria *\nPaso 1\nNombre del paso *\nDesarrollo *\nQuitar paso\n+ Agregar paso\nVerificación *\nConcepto clave *\nHabilidad requerida *\nToda pregunta nueva nace como borrador; publícala editándola.\nCancelar\nCrear"
+    },
+    {
+      "name": "admin-corrections",
+      "text": "👥 Usuarios totales\n7\n🟢 Activos\n5\n⛔ Suspendidos\n1\n🎫 Tickets abiertos\n2\n👥 Usuarios\n7\n🎫 Tickets\n2\n⚑ Recorrecciones\n0\nSolicitudes de recorrección\nEstado: Todos\nPendiente\nConfirmada\nRechazada\nLimpiar filtros\nPREGUNTA\tALUMNO\tMOTIVO\tCOMENTARIO\tESTADO\tRECIBIDA\t\n\n¿Cuánto es 3 + 4?\nqst_demo_02\n\tAlumno ficticio 01\nusr_demo_01\n\tRespuesta incorrecta\t\nLa alternativa debería ser D. Ejemplo ficticio.\n\tConfirmada\t25-09-2026\t\nResolver\n\n\n¿Cuánto es 3 + 4?\nqst_demo_02\n\tAlumno ficticio 01\nusr_demo_01\n\tRespuesta incorrecta\t\nLa alternativa debería ser D. Ejemplo ficticio.\n\tConfirmada\t25-09-2026\t\nResolver\n\n\n¿Cuánto es 3 + 4?\nqst_demo_02\n\tAlumno ficticio 01\nusr_demo_01\n\tRespuesta incorrecta\t\nLa alternativa debería ser D. Ejemplo ficticio.\n\tRechazada\t25-09-2026\t\nResolver"
+    },
+    {
+      "name": "finance-sponsors",
+      "menuVisible": false,
+      "text": "Cargando…"
+    }
+  ],
+  "screenshots": [
+    "C:\\Users\\tsung\\Documents\\ChatGPT\\capston\\DESARROLLO_FASE2_APRUEBA_ADMIN\\.local\\integracion-evidence\\admin-overview-integrated.png",
+    "C:\\Users\\tsung\\Documents\\ChatGPT\\capston\\DESARROLLO_FASE2_APRUEBA_ADMIN\\.local\\integracion-evidence\\admin-sponsor-form.png",
+    "C:\\Users\\tsung\\Documents\\ChatGPT\\capston\\DESARROLLO_FASE2_APRUEBA_ADMIN\\.local\\integracion-evidence\\admin-question-structured.png",
+    "C:\\Users\\tsung\\Documents\\ChatGPT\\capston\\DESARROLLO_FASE2_APRUEBA_ADMIN\\.local\\integracion-evidence\\admin-corrections.png",
+    "C:\\Users\\tsung\\Documents\\ChatGPT\\capston\\DESARROLLO_FASE2_APRUEBA_ADMIN\\.local\\integracion-evidence\\admin-plans-integrated.png",
+    "C:\\Users\\tsung\\Documents\\ChatGPT\\capston\\DESARROLLO_FASE2_APRUEBA_ADMIN\\.local\\integracion-evidence\\finance-commercial-integrated.png"
+  ]
+}

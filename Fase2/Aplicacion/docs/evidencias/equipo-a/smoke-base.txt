@@ -1,0 +1,59 @@
+TAP version 13
+# Subtest: El proceso responde health; no equivale a aceptación funcional
+ok 1 - El proceso responde health; no equivale a aceptación funcional
+  ---
+  duration_ms: 30.08467
+  type: 'test'
+  ...
+# Subtest: Cuatro roles pueden iniciar sesión con cuentas exclusivas del emulador
+ok 2 - Cuatro roles pueden iniciar sesión con cuentas exclusivas del emulador
+  ---
+  duration_ms: 500.524436
+  type: 'test'
+  ...
+# Subtest: Las 26 operaciones protegidas rechazan solicitudes sin token
+ok 3 - Las 26 operaciones protegidas rechazan solicitudes sin token
+  ---
+  duration_ms: 37.034994
+  type: 'test'
+  ...
+# Subtest: Lecturas de fixtures están disponibles con admin
+ok 4 - Lecturas de fixtures están disponibles con admin
+  ---
+  duration_ms: 190.951656
+  type: 'test'
+  ...
+# Subtest: Escritura y lectura de un sponsor en la base de tests
+ok 5 - Escritura y lectura de un sponsor en la base de tests
+  ---
+  duration_ms: 112.276519
+  type: 'test'
+  ...
+# Subtest: Repetir seed conserva los registros existentes y no duplica fixtures
+ok 6 - Repetir seed conserva los registros existentes y no duplica fixtures
+  ---
+  duration_ms: 678.659178
+  type: 'test'
+  ...
+# Subtest: Precio de plan cambia por API y se recupera en otra consulta
+ok 7 - Precio de plan cambia por API y se recupera en otra consulta
+  ---
+  duration_ms: 128.835754
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10426.17724
+
+time="2026-09-29T23:26:27-03:00" level=warning msg="Found orphan containers (aprueba-equipo-ops-bridge-1, aprueba-ops-lab) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-df57d353d28f Creating 
+ Container aprueba-equipo-test-run-df57d353d28f Created 

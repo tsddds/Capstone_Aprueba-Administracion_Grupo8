@@ -1,0 +1,15 @@
+# Configuración privada y resultados locales
+.env
+.env.*
+!.env.example
+.local/
+.vercel/
+node_modules/
+dist/
+test-results/
+~$*
+serviceAccount*.json
+service-account*.json
+*-firebase-adminsdk-*.json
+*.pem
+*.key

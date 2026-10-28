@@ -1,0 +1,53 @@
+# Opt-in: recurso local expresamente autorizado. Nunca usar en un host de producción.
+# El bridge posee acceso privilegiado al daemon; no exponer sus puertos ni su red.
+services:
+  backend:
+    environment:
+      OPS_BRIDGE_URL: http://ops-bridge:8089
+      OPS_BRIDGE_TOKEN: SOLO_DOCKER_LOCAL_BRIDGE_APRUEBA_2026
+      OPS_CONTAINER_ALLOWLIST: aprueba-ops-lab
+      OPS_SERVICES_JSON: '[{"key":"lab","name":"Sonda HTTP del laboratorio local","url":"http://ops-lab:8090/health"}]'
+    networks: [default, ops-control]
+  test:
+    environment:
+      OPS_BRIDGE_URL: http://ops-bridge:8089
+      OPS_BRIDGE_TOKEN: SOLO_DOCKER_LOCAL_BRIDGE_APRUEBA_2026
+      OPS_CONTAINER_ALLOWLIST: aprueba-ops-lab
+      OPS_SERVICES_JSON: '[{"key":"lab","name":"Sonda HTTP del laboratorio local","url":"http://ops-lab:8090/health"}]'
+    networks: [default, ops-control]
+  ops-lab:
+    build: ./infra/ops
+    container_name: aprueba-ops-lab
+    labels:
+      aprueba.ops.allowed: local-test-only
+    networks: [ops-control]
+    mem_limit: 192m
+    cpus: 0.25
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    healthcheck:
+      test: ["CMD","node","-e","fetch('http://127.0.0.1:8090/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 3s
+      timeout: 2s
+      retries: 20
+  ops-bridge:
+    build: ./infra/ops
+    # Root se requiere para el socket. La API administrativa NO recibe este socket.
+    user: "0:0"
+    command: ["node","bridge.mjs"]
+    environment:
+      OPS_BRIDGE_TOKEN: SOLO_DOCKER_LOCAL_BRIDGE_APRUEBA_2026
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks: [ops-control]
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 128m
+    depends_on:
+      ops-lab:
+        condition: service_healthy
+networks:
+  ops-control:
+    internal: true

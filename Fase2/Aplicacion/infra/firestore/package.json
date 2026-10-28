@@ -1,0 +1,6 @@
+{
+  "name": "aprueba-emulator-only",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": { "firebase-tools": "14.12.0" }
+}

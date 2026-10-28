@@ -1,0 +1,102 @@
+ Container aprueba-equipo-frontend-run-a262dad30f32 Creating 
+ Container aprueba-equipo-frontend-run-a262dad30f32 Created 
+TAP version 13
+# Subtest: Importación acepta array y sobre testId/items sin modificar explicación estructurada
+ok 1 - Importación acepta array y sobre testId/items sin modificar explicación estructurada
+  ---
+  duration_ms: 1.114861
+  type: 'test'
+  ...
+# Subtest: Importación no reemplaza silenciosamente una prueba distinta a la del archivo
+ok 2 - Importación no reemplaza silenciosamente una prueba distinta a la del archivo
+  ---
+  duration_ms: 0.393022
+  type: 'test'
+  ...
+# Subtest: Importación detecta JSON inválido, prueba ausente y límites del lote
+ok 3 - Importación detecta JSON inválido, prueba ausente y límites del lote
+  ---
+  duration_ms: 0.35892
+  type: 'test'
+  ...
+# Subtest: Importación conserva el código b1 de Biología de las preguntas originales
+ok 4 - Importación conserva el código b1 de Biología de las preguntas originales
+  ---
+  duration_ms: 0.120306
+  type: 'test'
+  ...
+# Subtest: El catálogo de recorrecciones encuentra preguntas posteriores a la primera página
+ok 5 - El catálogo de recorrecciones encuentra preguntas posteriores a la primera página
+  ---
+  duration_ms: 1.752996
+  type: 'test'
+  ...
+# Subtest: Un fallo posterior no entrega un catálogo incompleto de preguntas
+ok 6 - Un fallo posterior no entrega un catálogo incompleto de preguntas
+  ---
+  duration_ms: 1.176964
+  type: 'test'
+  ...
+# Subtest: Un catálogo vacío termina y un cursor repetido se rechaza
+ok 7 - Un catálogo vacío termina y un cursor repetido se rechaza
+  ---
+  duration_ms: 0.235813
+  type: 'test'
+  ...
+# Subtest: Las alternativas finales vacías se omiten conservando la letra correcta
+ok 8 - Las alternativas finales vacías se omiten conservando la letra correcta
+  ---
+  duration_ms: 0.137807
+  type: 'test'
+  ...
+# Subtest: Un hueco intermedio no desplaza las letras de las alternativas
+ok 9 - Un hueco intermedio no desplaza las letras de las alternativas
+  ---
+  duration_ms: 0.320017
+  type: 'test'
+  ...
+# Subtest: La respuesta fuera de opciones no se cambia silenciosamente a A
+ok 10 - La respuesta fuera de opciones no se cambia silenciosamente a A
+  ---
+  duration_ms: 0.126007
+  type: 'test'
+  ...
+# Subtest: La edición de dos alternativas permite añadir hasta E sin alterar las existentes
+ok 11 - La edición de dos alternativas permite añadir hasta E sin alterar las existentes
+  ---
+  duration_ms: 0.238513
+  type: 'test'
+  ...
+# Subtest: La pantalla conserva todos los sponsors al atravesar varias páginas
+ok 12 - La pantalla conserva todos los sponsors al atravesar varias páginas
+  ---
+  duration_ms: 1.299671
+  type: 'test'
+  ...
+# Subtest: Una página vacía produce listado vacío sin consultas adicionales
+ok 13 - Una página vacía produce listado vacío sin consultas adicionales
+  ---
+  duration_ms: 0.214511
+  type: 'test'
+  ...
+# Subtest: Un fallo en otra página no publica totales parciales
+ok 14 - Un fallo en otra página no publica totales parciales
+  ---
+  duration_ms: 0.993654
+  type: 'test'
+  ...
+# Subtest: Un cursor repetido no provoca un bucle infinito
+ok 15 - Un cursor repetido no provoca un bucle infinito
+  ---
+  duration_ms: 0.448824
+  type: 'test'
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 105.028745

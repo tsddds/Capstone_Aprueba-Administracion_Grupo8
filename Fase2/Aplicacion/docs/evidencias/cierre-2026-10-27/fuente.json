@@ -1,0 +1,28 @@
+{
+  "at": "2026-10-27T15:11:31.531Z",
+  "sourceHashes": {
+    "backend/src/routes/corrections.js": "687179f54cb1e448dccfd507554c3d9c4efe12362918f9199ff7c27cafcdf575",
+    "backend/src/data/corrections.js": "1053d48cbf4ab821dd0ee0468fcd8421dcfcce3e3d8622eaff4b1f921082da31",
+    "backend/src/data/admin-support.js": "883ce040c47c94b6ba1f970f3f92bd7266c203111f709676e0faf61b9dcb6f25",
+    "backend/src/services/metrics/job.js": "157576fd3376f74abdb5547a9ffb990a798f03d9c68dab0942bfa5453a40ce59",
+    "backend/src/index.js": "0d83f85150d34ec9f4734062946604c7a4786ebb3d098961685428410a3bce2a",
+    "frontend/src/pages/Users.jsx": "955452e78bb327d34eab3883f7d82c600996df6a5c9b94dc57be33eff5005bd3",
+    "frontend/src/pages/Overview.jsx": "6a515481dbdfbba4e39fc84f0a214dc78469e88bd721aaf93ca6b2208ec23c70",
+    "frontend/src/i18n.js": "13dde27e1321084bb7cf854d97bc37f24c64e820ddd1efd6fa90f1f8ea67b677"
+  },
+  "externalStripe": false,
+  "emulator": "demo-aprueba-tests",
+  "note": "Árbol local con cambios sin publicar; los SHA identifican las fuentes probadas.",
+  "baseGitHead": "a2b05bea2f9b3e50f144b1cb62f8bb3b7c92aab6",
+  "branch": "codex/integracion-fase2",
+  "metadataVerifiedAt": "2026-10-27T15:34:23.778Z",
+  "additionalVerifiedHashes": {
+    "backend/src/routes/metrics.js": "29ef371f53f073ff529f2cb5f3b6e6dcd23c6a7533f32a5895df396030cadd5d",
+    "backend/dev/run-tests.mjs": "b2e9910336c72cc66261e4a6f7e49032a4f4911c77a113cb386e26f6f5fbb6cd",
+    "backend/dev/verify-phase2.mjs": "fa62ef1213958d9508d19e9150cdc713592d4216b3002c5fc0e42ff96e4b2bb4",
+    "backend/test/integration/a-sprint2.test.mjs": "ddc1d783053f4c9c42c67f15270785872954be48f1d8d9580703bb9e1dbb0296",
+    "backend/test/integration/b-corrections-resolve.test.mjs": "071d816326ad820291eeab2485f3f6e300e993a7bc3e78c4cbdcabc21e6375b4",
+    "backend/test/integration/c-metrics.test.mjs": "92b1ad3149011381c7b92637af17ff22fe1665548b1871a068744e343e3d9381",
+    "backend/test/unit/metrics-job.test.mjs": "1abd0b0d988e3ea811d3796503e7ff678fa95962d09b9e3212b9db67bfe1246f"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "testId": "m1",
+  "items": [
+    {
+      "pregunta": "Si 2x = 10, ¿cuánto vale x?",
+      "alternativas": ["2", "3", "5", "8", "10"],
+      "respuesta_correcta": "C",
+      "explicacion_respuesta": "Dividir ambos lados por dos.",
+      "habilidad_requerida": "Resolver ecuaciones",
+      "eje": "Álgebra",
+      "dificultad": "d1"
+    }
+  ]
+}

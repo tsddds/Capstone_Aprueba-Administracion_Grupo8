@@ -1,0 +1,64 @@
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-1839baf5b108 Creating 
+ Container aprueba-equipo-test-run-1839baf5b108 Created 
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E01 login returns public identity, claims, TTL and secure HttpOnly cookie
+ok 1 - E01 login returns public identity, claims, TTL and secure HttpOnly cookie
+  ---
+  duration_ms: 486.575584
+  type: 'test'
+  ...
+# Subtest: E01 invalid shapes, unknown fields and wrong credentials have contract errors
+ok 2 - E01 invalid shapes, unknown fields and wrong credentials have contract errors
+  ---
+  duration_ms: 84.164599
+  type: 'test'
+  ...
+# Subtest: E01 MFA validates TOTP and disallows replay; fixed demo OTP is removed
+ok 3 - E01 MFA validates TOTP and disallows replay; fixed demo OTP is removed
+  ---
+  duration_ms: 419.794549
+  type: 'test'
+  ...
+# Subtest: E01 disabled accounts and stale permissions cannot login or reuse access
+ok 4 - E01 disabled accounts and stale permissions cannot login or reuse access
+  ---
+  duration_ms: 153.657953
+  type: 'test'
+  ...
+# Subtest: Authentication rejects expired, refresh, tampered and student tokens
+ok 5 - Authentication rejects expired, refresh, tampered and student tokens
+  ---
+  duration_ms: 10.70637
+  type: 'test'
+  ...
+# Subtest: E12/E13 permission matrix and missing-user errors
+ok 6 - E12/E13 permission matrix and missing-user errors
+  ---
+  duration_ms: 406.065846
+  type: 'test'
+  ...
+# Subtest: E12 query filters, empty results, page, sort and cursor coverage
+ok 7 - E12 query filters, empty results, page, sort and cursor coverage
+  ---
+  duration_ms: 266.68172
+  type: 'test'
+  ...
+# Subtest: E12/E13 projections remove top-level and nested secrets and read current subscription
+ok 8 - E12/E13 projections remove top-level and nested secrets and read current subscription
+  ---
+  duration_ms: 120.934115
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9209.177435

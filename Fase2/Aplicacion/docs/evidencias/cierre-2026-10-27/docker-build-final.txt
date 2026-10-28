@@ -1,0 +1,104 @@
+ Image aprueba-equipo-backend Building 
+ Image aprueba-equipo-frontend Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 2.31kB 0.0s done
+#1 DONE 0.0s
+
+#2 [backend internal] load build definition from Dockerfile.dev
+#2 transferring dockerfile: 281B done
+#2 DONE 0.0s
+
+#3 [frontend internal] load build definition from Dockerfile.dev
+#3 transferring dockerfile: 481B done
+#3 DONE 0.0s
+
+#4 [frontend internal] load metadata for docker.io/library/node:22-bookworm-slim
+#4 ...
+
+#5 [auth] library/node:pull token for registry-1.docker.io
+#5 DONE 0.0s
+
+#4 [frontend internal] load metadata for docker.io/library/node:22-bookworm-slim
+#4 DONE 0.9s
+
+#6 [frontend internal] load .dockerignore
+#6 transferring context: 128B done
+#6 DONE 0.0s
+
+#7 [backend internal] load .dockerignore
+#7 transferring context: 129B done
+#7 DONE 0.0s
+
+#8 [backend 1/7] FROM docker.io/library/node:22-bookworm-slim@sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d
+#8 resolve docker.io/library/node:22-bookworm-slim@sha256:de170b39439eb0e5a3444ad7d60b015614a381e10fecae2e30ec9e735122f38d 0.0s done
+#8 DONE 0.0s
+
+#9 [backend internal] load build context
+#9 transferring context: 372.94kB 0.0s done
+#9 DONE 0.0s
+
+#10 [frontend internal] load build context
+#10 transferring context: 62.27kB done
+#10 DONE 0.0s
+
+#11 [backend 3/7] COPY package.json package-lock.json ./
+#11 CACHED
+
+#12 [backend 4/7] RUN npm ci --ignore-scripts --no-audit --no-fund
+#12 CACHED
+
+#13 [frontend 3/7] COPY package.json package-lock.json ./
+#13 CACHED
+
+#14 [frontend 2/7] WORKDIR /app
+#14 CACHED
+
+#15 [frontend 4/7] RUN npm ci --ignore-scripts --no-audit --no-fund
+#15 CACHED
+
+#16 [frontend 5/7] COPY index.html vite.config.js ./
+#16 CACHED
+
+#17 [frontend 6/7] COPY src ./src
+#17 DONE 0.0s
+
+#18 [backend 5/7] COPY src ./src
+#18 DONE 0.0s
+
+#19 [backend 6/7] COPY dev ./dev
+#19 DONE 0.1s
+
+#20 [backend 7/7] COPY test ./test
+#20 DONE 0.0s
+
+#21 [backend] exporting to image
+#21 exporting layers 0.1s done
+#21 exporting manifest sha256:e602b5c3d7a2fe22dc35faefde106e118a97bd9a833751e1dc26e033a78e543b 0.0s done
+#21 exporting config sha256:c9d06585f86490e566b1eb86e90ce3e00fc1b30661b1a6b74d748670a3153768 0.0s done
+#21 exporting attestation manifest sha256:4ad258744692b21dc53c6e5bf39de6c04335cf82587b8977d0eba85d0f264feb 0.0s done
+#21 exporting manifest list sha256:794a8b1b5e85fedce286a7bccb925c82dbcc4c675e26328339d9cc1ee874ee48 0.0s done
+#21 naming to docker.io/library/aprueba-equipo-backend:latest done
+#21 unpacking to docker.io/library/aprueba-equipo-backend:latest 0.1s done
+#21 DONE 0.3s
+
+#22 [backend] resolving provenance for metadata file
+#22 DONE 0.0s
+
+#23 [frontend 7/7] RUN chown -R node:node /app
+#23 DONE 4.2s
+
+#24 [frontend] exporting to image
+#24 exporting layers 1.4s done
+#24 exporting manifest sha256:127ae688a66fab77336e00aab5423502da16094d71190ac326556429ac8bdc7c 0.0s done
+#24 exporting config sha256:5284ee06500d549a4223c82b135cc12148912d50c12c93c8cd437b688a56e1e6 0.0s done
+#24 exporting attestation manifest sha256:dcf2c34da16b140207553a5e66355224d870bc9fddf6440068b6725fcce113fe 0.0s done
+#24 exporting manifest list sha256:afddd5f4500f343a878091ea8f3f20d9d0f74b33a70dfc525af59f570c5b9ef7 0.0s done
+#24 naming to docker.io/library/aprueba-equipo-frontend:latest done
+#24 unpacking to docker.io/library/aprueba-equipo-frontend:latest
+#24 unpacking to docker.io/library/aprueba-equipo-frontend:latest 0.6s done
+#24 DONE 2.1s
+
+#25 [frontend] resolving provenance for metadata file
+#25 DONE 0.0s
+ Image aprueba-equipo-backend Built 
+ Image aprueba-equipo-frontend Built 

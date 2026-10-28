@@ -1,0 +1,28 @@
+# Dependencias y compilaciones
+node_modules/
+dist/
+coverage/
+*.log
+
+# Variables privadas: permitir solo la plantilla sin credenciales
+.env
+.env.*
+!.env.example
+
+# Credenciales de servidor
+serviceAccount*.json
+service-account*.json
+*-firebase-adminsdk-*.json
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Configuración local de despliegue
+.vercel/
+
+# Estado local del emulador y resultados (nunca exportar a Git datos de usuarios)
+infra/firestore/.firebase/
+infra/firestore/data/
+test-results/
+.local/

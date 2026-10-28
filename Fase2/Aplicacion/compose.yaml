@@ -1,0 +1,110 @@
+name: aprueba-equipo
+
+# SOLO desarrollo aislado. No lee .env del proyecto ni credenciales reales.
+x-backend: &backend
+  build:
+    context: ./backend
+    dockerfile: Dockerfile.dev
+  working_dir: /app
+  environment:
+    NODE_ENV: development
+    GCLOUD_PROJECT: demo-aprueba-equipo
+    FIRESTORE_EMULATOR_HOST: firestore:8080
+    JWT_SECRET: SOLO_EMULADOR_APRUEBA_NO_USAR_EN_INTERNET_2026
+    PORT: "4000"
+  volumes:
+    - ./backend/src:/app/src
+    - ./backend/dev:/app/dev
+    - ./backend/test:/app/test
+    - ./docs:/docs:ro
+
+services:
+  firestore:
+    build: ./infra/firestore
+    ports:
+      - "127.0.0.1:8080:8080"
+      # Visor oficial, descubrimiento/logs y canal de solicitudes: SOLO este PC.
+      - "127.0.0.1:4001:4001"
+      - "127.0.0.1:4400:4400"
+      - "127.0.0.1:4500:4500"
+      - "127.0.0.1:9150:9150"
+    volumes:
+      - firestore-data:/data
+    stop_grace_period: 40s
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8080').then(()=>process.exit(0)).catch(()=>process.exit(1))"]
+      interval: 3s
+      timeout: 3s
+      retries: 40
+      start_period: 30s
+
+  seed:
+    <<: *backend
+    command: ["node", "dev/seed.mjs"]
+    depends_on:
+      firestore:
+        condition: service_healthy
+    restart: "no"
+
+  backend:
+    <<: *backend
+    command: ["node", "--watch", "dev/start.mjs"]
+    ports:
+      - "127.0.0.1:4000:4000"
+    depends_on:
+      seed:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:4000/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  frontend:
+    profiles: ["ui"]
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    environment:
+      DEV_API_TARGET: http://backend:4000
+    ports:
+      - "127.0.0.1:5173:5173"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/index.html:/app/index.html:ro
+      - ./frontend/vite.config.js:/app/vite.config.js:ro
+    depends_on:
+      backend:
+        condition: service_healthy
+
+  test:
+    <<: *backend
+    profiles: ["test"]
+    # Base SEPARADA de la que usan backend y frontend.
+    environment:
+      NODE_ENV: test
+      GCLOUD_PROJECT: demo-aprueba-tests
+      FIRESTORE_EMULATOR_HOST: firestore-test:8080
+      JWT_SECRET: SOLO_EMULADOR_APRUEBA_NO_USAR_EN_INTERNET_2026
+    depends_on:
+      firestore-test:
+        condition: service_healthy
+    command: ["npm", "run", "test:integration"]
+
+  firestore-test:
+    profiles: ["test"]
+    build: ./infra/firestore
+    environment:
+      EMULATOR_PROJECT: demo-aprueba-tests
+      EMULATOR_EPHEMERAL: "1"
+    tmpfs:
+      - /data
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:8080').then(()=>process.exit(0)).catch(()=>process.exit(1))"]
+      interval: 3s
+      timeout: 3s
+      retries: 40
+      start_period: 30s
+
+volumes:
+  firestore-data:

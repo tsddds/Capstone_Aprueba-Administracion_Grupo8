@@ -1,0 +1,144 @@
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-4d92e90036cb Creating 
+ Container aprueba-equipo-test-run-4d92e90036cb Created 
+
+> aprueba-admin-backend@1.0.0 test
+> node --test test/unit/*.test.mjs
+
+TAP version 13
+# Subtest: RFC 6238 SHA1 vectors and replay protection
+ok 1 - RFC 6238 SHA1 vectors and replay protection
+  ---
+  duration_ms: 2.38253
+  type: 'test'
+  ...
+# Subtest: Cursor pagination is deterministic for ties and rejects incompatible cursors
+ok 2 - Cursor pagination is deterministic for ties and rejects incompatible cursors
+  ---
+  duration_ms: 11.557633
+  type: 'test'
+  ...
+# Subtest: E22: fallo de escritura no se cuenta como importado y permite continuar sin filtrar secretos
+ok 3 - E22: fallo de escritura no se cuenta como importado y permite continuar sin filtrar secretos
+  ---
+  duration_ms: 3.040266
+  type: 'test'
+  ...
+# Subtest: E22: identidad normaliza espacios y Unicode, conserva mayúsculas y separa pruebas
+ok 4 - E22: identidad normaliza espacios y Unicode, conserva mayúsculas y separa pruebas
+  ---
+  duration_ms: 0.54483
+  type: 'test'
+  ...
+# Subtest: E22: acepta clasificación pendiente sin inventar valores y rechaza valores inválidos
+ok 5 - E22: acepta clasificación pendiente sin inventar valores y rechaza valores inválidos
+  ---
+  duration_ms: 2.543139
+  type: 'test'
+  ...
+# Subtest: C métricas reproducen oráculo MAU=4, conversión=50%, MRR=8000 sin snapshots
+ok 6 - C métricas reproducen oráculo MAU=4, conversión=50%, MRR=8000 sin snapshots
+  ---
+  duration_ms: 13.493238
+  type: 'test'
+  ...
+# Subtest: C actividad usa usuarios únicos, frontera abierta de 30 días y excluye fechas futuras
+ok 7 - C actividad usa usuarios únicos, frontera abierta de 30 días y excluye fechas futuras
+  ---
+  duration_ms: 0.531429
+  type: 'test'
+  ...
+# Subtest: C deduplica eventos, distingue emisión de saldo y pagos de MRR
+ok 8 - C deduplica eventos, distingue emisión de saldo y pagos de MRR
+  ---
+  duration_ms: 1.117261
+  type: 'test'
+  ...
+# Subtest: C datos vacíos, rangos y períodos vencidos no producen NaN o suscriptores falsos
+ok 9 - C datos vacíos, rangos y períodos vencidos no producen NaN o suscriptores falsos
+  ---
+  duration_ms: 0.608934
+  type: 'test'
+  ...
+# Subtest: C MRR anual usa importe de suscripción, no nuevo precio del catálogo
+ok 10 - C MRR anual usa importe de suscripción, no nuevo precio del catálogo
+  ---
+  duration_ms: 1.062358
+  type: 'test'
+  ...
+# Subtest: C límites cero se conservan; entrada inválida no se normaliza silenciosamente
+ok 11 - C límites cero se conservan; entrada inválida no se normaliza silenciosamente
+  ---
+  duration_ms: 0.875347
+  type: 'test'
+  ...
+# Subtest: C Stripe rechaza claves live, reutiliza claves por operación y conserva unidades CLP
+ok 12 - C Stripe rechaza claves live, reutiliza claves por operación y conserva unidades CLP
+  ---
+  duration_ms: 1.260369
+  type: 'test'
+  ...
+# Subtest: metrics job solo admite GET y no ejecuta trabajo con otros métodos
+ok 13 - metrics job solo admite GET y no ejecuta trabajo con otros métodos
+  ---
+  duration_ms: 1.727294
+  type: 'test'
+  ...
+# Subtest: metrics job sin secreto seguro queda cerrado y no expone el secreto
+ok 14 - metrics job sin secreto seguro queda cerrado y no expone el secreto
+  ---
+  duration_ms: 0.357619
+  type: 'test'
+  ...
+# Subtest: metrics job rechaza autorización ausente, distinta y mal formada sin recalcular
+ok 15 - metrics job rechaza autorización ausente, distinta y mal formada sin recalcular
+  ---
+  duration_ms: 1.730495
+  type: 'test'
+  ...
+# Subtest: metrics job autorizado actualiza una vez y devuelve metadatos sin datos personales
+ok 16 - metrics job autorizado actualiza una vez y devuelve metadatos sin datos personales
+  ---
+  duration_ms: 1.056258
+  type: 'test'
+  ...
+# Subtest: metrics job no declara éxito cuando falla la persistencia
+ok 17 - metrics job no declara éxito cuando falla la persistencia
+  ---
+  duration_ms: 1.212367
+  type: 'test'
+  ...
+# Subtest: Guardia de seed permite únicamente destinos demo explícitos
+ok 18 - Guardia de seed permite únicamente destinos demo explícitos
+  ---
+  duration_ms: 1.061558
+  type: 'test'
+  ...
+# Subtest: Fixtures reproducibles, referencias válidas y sin usuarios empresariales
+ok 19 - Fixtures reproducibles, referencias válidas y sin usuarios empresariales
+  ---
+  duration_ms: 2.800453
+  type: 'test'
+  ...
+# Subtest: Reparto contiene exactamente 27 métodos/rutas únicos y responsables
+ok 20 - Reparto contiene exactamente 27 métodos/rutas únicos y responsables
+  ---
+  duration_ms: 1.8414
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 159.563029
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.1
+npm notice To update run: npm install -g npm@12.2.1
+npm notice

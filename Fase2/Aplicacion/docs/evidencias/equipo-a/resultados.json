@@ -1,0 +1,82 @@
+{
+  "environment": "Docker local; demo-aprueba-tests",
+  "results": [
+    {
+      "name": "unit",
+      "command": "docker compose -f compose.yaml --profile test run --rm test npm test",
+      "startedAt": "2026-09-30T02:25:37.263Z",
+      "endedAt": "2026-09-30T02:25:38.804Z",
+      "exitCode": 0,
+      "tests": 5,
+      "pass": 5,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "a-sprint1",
+      "command": "docker compose -f compose.yaml --profile test run --rm test node dev/run-tests.mjs a-sprint1",
+      "startedAt": "2026-09-30T02:25:38.806Z",
+      "endedAt": "2026-09-30T02:25:50.648Z",
+      "exitCode": 0,
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "a-sprint2",
+      "command": "docker compose -f compose.yaml --profile test run --rm test node dev/run-tests.mjs a-sprint2",
+      "startedAt": "2026-09-30T02:25:50.648Z",
+      "endedAt": "2026-09-30T02:26:14.560Z",
+      "exitCode": 0,
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "a-ops",
+      "command": "docker compose -f compose.yaml -f compose.ops.yaml --profile test run --rm test node dev/run-tests.mjs a-ops",
+      "startedAt": "2026-09-30T02:26:14.560Z",
+      "endedAt": "2026-09-30T02:26:27.103Z",
+      "exitCode": 0,
+      "tests": 8,
+      "pass": 8,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "smoke-base",
+      "command": "docker compose -f compose.yaml --profile test run --rm test node dev/run-tests.mjs smoke",
+      "startedAt": "2026-09-30T02:26:27.104Z",
+      "endedAt": "2026-09-30T02:26:40.152Z",
+      "exitCode": 0,
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "smoke-ops",
+      "command": "docker compose -f compose.yaml -f compose.ops.yaml --profile test run --rm test node dev/run-tests.mjs smoke",
+      "startedAt": "2026-09-30T02:26:40.152Z",
+      "endedAt": "2026-09-30T02:26:54.201Z",
+      "exitCode": 0,
+      "tests": 7,
+      "pass": 7,
+      "fail": 0,
+      "skipped": 0
+    },
+    {
+      "name": "contract",
+      "command": "docker compose -f compose.yaml --profile test run --rm test node dev/run-tests.mjs contract",
+      "startedAt": "2026-09-30T02:26:54.201Z",
+      "endedAt": "2026-09-30T02:27:03.313Z",
+      "exitCode": 1,
+      "tests": 8,
+      "pass": 1,
+      "fail": 7,
+      "skipped": 0
+    }
+  ]
+}

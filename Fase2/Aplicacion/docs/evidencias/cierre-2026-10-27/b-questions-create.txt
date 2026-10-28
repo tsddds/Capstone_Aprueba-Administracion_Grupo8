@@ -1,0 +1,76 @@
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-09a7527dbb3b Creating 
+ Container aprueba-equipo-test-run-09a7527dbb3b Created 
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E20: crea draft con los cinco campos de explanation y conserva todos sus pasos
+ok 1 - E20: crea draft con los cinco campos de explanation y conserva todos sus pasos
+  ---
+  duration_ms: 557.581964
+  type: 'test'
+  ...
+# Subtest: E20: mantiene explicación de texto y acepta dos alternativas o cinco con respuesta E
+ok 2 - E20: mantiene explicación de texto y acepta dos alternativas o cinco con respuesta E
+  ---
+  duration_ms: 139.400016
+  type: 'test'
+  ...
+# Subtest: E20: acepta las cinco pruebas y las cuatro dificultades del contrato
+ok 3 - E20: acepta las cinco pruebas y las cuatro dificultades del contrato
+  ---
+  duration_ms: 336.235994
+  type: 'test'
+  ...
+# Subtest: E20: finance recibe 403 sin crear preguntas
+ok 4 - E20: finance recibe 403 sin crear preguntas
+  ---
+  duration_ms: 80.077548
+  type: 'test'
+  ...
+# Subtest: E20: support recibe 403 sin crear preguntas
+ok 5 - E20: support recibe 403 sin crear preguntas
+  ---
+  duration_ms: 80.30876
+  type: 'test'
+  ...
+# Subtest: E20: ops recibe 403 sin crear preguntas
+ok 6 - E20: ops recibe 403 sin crear preguntas
+  ---
+  duration_ms: 80.387165
+  type: 'test'
+  ...
+# Subtest: E20: student recibe 403 y falta de token 401 sin escribir datos
+ok 7 - E20: student recibe 403 y falta de token 401 sin escribir datos
+  ---
+  duration_ms: 14.949949
+  type: 'test'
+  ...
+# Subtest: E20: todos los campos son obligatorios y no se aceptan tipos o enums inválidos
+ok 8 - E20: todos los campos son obligatorios y no se aceptan tipos o enums inválidos
+  ---
+  duration_ms: 336.969936
+  type: 'test'
+  ...
+# Subtest: E20: alternativas inválidas o respuesta inexistente no crean preguntas ni cambian la letra
+ok 9 - E20: alternativas inválidas o respuesta inexistente no crean preguntas ni cambian la letra
+  ---
+  duration_ms: 173.595458
+  type: 'test'
+  ...
+# Subtest: E20: valida explanation completo y rechaza objetos malformados sin guardar parcialmente
+ok 10 - E20: valida explanation completo y rechaza objetos malformados sin guardar parcialmente
+  ---
+  duration_ms: 307.417657
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8940.779906

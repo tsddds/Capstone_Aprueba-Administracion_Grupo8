@@ -1,0 +1,16 @@
+{
+  "data": {
+    "id": "cierre_20261027",
+    "state": "confirmed",
+    "rewardGranted": {
+      "userId": "cierre_20261027",
+      "tier": "bronze",
+      "amount": 250
+    }
+  },
+  "error": null,
+  "meta": {
+    "requestId": "req_17f7647a-36d",
+    "timestamp": "2026-10-27T15:19:58.659Z"
+  }
+}

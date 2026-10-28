@@ -1,0 +1,7 @@
+**
+!package.json
+!package-lock.json
+!index.html
+!vite.config.js
+!src/**
+!Dockerfile.dev

@@ -1,0 +1,225 @@
+TAP version 13
+# Emulador aislado demo-aprueba-tests
+# Subtest: E18: admin confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+ok 1 - E18: admin confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+  ---
+  duration_ms: 769.909972
+  type: 'test'
+  ...
+# Subtest: E18: support confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+ok 2 - E18: support confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+  ---
+  duration_ms: 186.83297
+  type: 'test'
+  ...
+# Subtest: E18: rechazar no cambia medallas ni pregunta y también guarda aviso
+ok 3 - E18: rechazar no cambia medallas ni pregunta y también guarda aviso
+  ---
+  duration_ms: 161.584165
+  type: 'test'
+  ...
+# Subtest: E18: confirmación sin parche conserva la pregunta completa
+ok 4 - E18: confirmación sin parche conserva la pregunta completa
+  ---
+  duration_ms: 152.086025
+  type: 'test'
+  ...
+# Subtest: E18: confirmed conserva la nota interna sin incluirla en el aviso del alumno
+not ok 5 - E18: confirmed conserva la nota interna sin incluirla en el aviso del alumno
+  ---
+  duration_ms: 112.357926
+  type: 'test'
+  location: '/app/test/integration/b-corrections-resolve.test.mjs:73:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    400 !== 200
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 200
+  actual: 400
+  operator: 'strictEqual'
+  stack: |-
+    file:///app/test/integration/b-corrections-resolve.test.mjs:78:14
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async fixture (file:///app/test/integration/b-corrections-resolve.test.mjs:26:9)
+    async TestContext.<anonymous> (file:///app/test/integration/b-corrections-resolve.test.mjs:75:5)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: E18: rejected conserva la nota interna sin incluirla en el aviso del alumno
+not ok 6 - E18: rejected conserva la nota interna sin incluirla en el aviso del alumno
+  ---
+  duration_ms: 137.780665
+  type: 'test'
+  location: '/app/test/integration/b-corrections-resolve.test.mjs:73:3'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    400 !== 200
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 200
+  actual: 400
+  operator: 'strictEqual'
+  stack: |-
+    file:///app/test/integration/b-corrections-resolve.test.mjs:78:14
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async fixture (file:///app/test/integration/b-corrections-resolve.test.mjs:26:9)
+    async TestContext.<anonymous> (file:///app/test/integration/b-corrections-resolve.test.mjs:75:5)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: E18: nota inválida se rechaza antes de escribir y acepta el límite de 2000 caracteres
+not ok 7 - E18: nota inválida se rechaza antes de escribir y acepta el límite de 2000 caracteres
+  ---
+  duration_ms: 386.611425
+  type: 'test'
+  location: '/app/test/integration/b-corrections-resolve.test.mjs:89:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    400 !== 200
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 200
+  actual: 400
+  operator: 'strictEqual'
+  stack: |-
+    file:///app/test/integration/b-corrections-resolve.test.mjs:99:12
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async fixture (file:///app/test/integration/b-corrections-resolve.test.mjs:26:9)
+    async TestContext.<anonymous> (file:///app/test/integration/b-corrections-resolve.test.mjs:91:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: E18: repetir o competir con notas diferentes no sobrescribe la nota ni duplica efectos
+not ok 8 - E18: repetir o competir con notas diferentes no sobrescribe la nota ni duplica efectos
+  ---
+  duration_ms: 135.884218
+  type: 'test'
+  location: '/app/test/integration/b-corrections-resolve.test.mjs:104:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly deep-equal:
+    + actual - expected
+    
+      [
+    +   400,
+    +   400
+    -   200,
+    -   409
+      ]
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected:
+    0: 200
+    1: 409
+  actual:
+    0: 400
+    1: 400
+  operator: 'deepStrictEqual'
+  stack: |-
+    file:///app/test/integration/b-corrections-resolve.test.mjs:109:12
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async fixture (file:///app/test/integration/b-corrections-resolve.test.mjs:26:9)
+    async TestContext.<anonymous> (file:///app/test/integration/b-corrections-resolve.test.mjs:106:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: E18: una escritura fallida revierte también la nota interna
+not ok 9 - E18: una escritura fallida revierte también la nota interna
+  ---
+  duration_ms: 129.658062
+  type: 'test'
+  location: '/app/test/integration/b-corrections-resolve.test.mjs:118:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    400 !== 500
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 500
+  actual: 400
+  operator: 'strictEqual'
+  stack: |-
+    file:///app/test/integration/b-corrections-resolve.test.mjs:124:12
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async fixture (file:///app/test/integration/b-corrections-resolve.test.mjs:26:9)
+    async TestContext.<anonymous> (file:///app/test/integration/b-corrections-resolve.test.mjs:120:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: E18: explicación estructurada completa y texto siguen siendo compatibles
+ok 10 - E18: explicación estructurada completa y texto siguen siendo compatibles
+  ---
+  duration_ms: 212.576347
+  type: 'test'
+  ...
+# Subtest: E18: repetición y cambio de resolución devuelven 409 sin nuevos efectos
+ok 11 - E18: repetición y cambio de resolución devuelven 409 sin nuevos efectos
+  ---
+  duration_ms: 288.568659
+  type: 'test'
+  ...
+# Subtest: E18: dos confirmaciones simultáneas producen un éxito, un 409 y un único premio
+ok 12 - E18: dos confirmaciones simultáneas producen un éxito, un 409 y un único premio
+  ---
+  duration_ms: 3560.084058
+  type: 'test'
+  ...
+# Subtest: E18: solicitudes distintas del mismo alumno acumulan 500 bronce sin perder saldo
+ok 13 - E18: solicitudes distintas del mismo alumno acumulan 500 bronce sin perder saldo
+  ---
+  duration_ms: 3413.423254
+  type: 'test'
+  ...
+# Subtest: E18: errores de validación no dejan saldo, aviso, estado o pregunta parciales
+ok 14 - E18: errores de validación no dejan saldo, aviso, estado o pregunta parciales
+  ---
+  duration_ms: 264.657123
+  type: 'test'
+  ...
+[error] Error
+# Subtest: E18: fallo al persistir aviso cancela también premio, movimiento, pregunta y resolución
+ok 15 - E18: fallo al persistir aviso cancela también premio, movimiento, pregunta y resolución
+  ---
+  duration_ms: 123.989953
+  type: 'test'
+  ...
+# Subtest: E18: referencias inexistentes o inválidas se rechazan sin resolver ni premiar
+ok 16 - E18: referencias inexistentes o inválidas se rechazan sin resolver ni premiar
+  ---
+  duration_ms: 249.144141
+  type: 'test'
+  ...
+# Subtest: E18: saldo ausente inicia en cero sin tomar badges como bronce; saldo inválido cancela
+ok 17 - E18: saldo ausente inicia en cero sin tomar badges como bronce; saldo inválido cancela
+  ---
+  duration_ms: 440.9384
+  type: 'test'
+  ...
+# Subtest: E18: permisos y tokens inválidos impiden toda escritura
+ok 18 - E18: permisos y tokens inválidos impiden toda escritura
+  ---
+  duration_ms: 198.140756
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 13
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 11129.262679

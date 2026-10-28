@@ -1,0 +1,126 @@
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-1d77f688ac4d Creating 
+ Container aprueba-equipo-test-run-1d77f688ac4d Created 
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E18: admin confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+ok 1 - E18: admin confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+  ---
+  duration_ms: 575.093404
+  type: 'test'
+  ...
+# Subtest: E18: support confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+ok 2 - E18: support confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+  ---
+  duration_ms: 125.393688
+  type: 'test'
+  ...
+# Subtest: E18: rechazar no cambia medallas ni pregunta y también guarda aviso
+ok 3 - E18: rechazar no cambia medallas ni pregunta y también guarda aviso
+  ---
+  duration_ms: 111.925126
+  type: 'test'
+  ...
+# Subtest: E18: confirmación sin parche conserva la pregunta completa
+ok 4 - E18: confirmación sin parche conserva la pregunta completa
+  ---
+  duration_ms: 101.435233
+  type: 'test'
+  ...
+# Subtest: E18: confirmed conserva la nota interna sin incluirla en el aviso del alumno
+ok 5 - E18: confirmed conserva la nota interna sin incluirla en el aviso del alumno
+  ---
+  duration_ms: 117.779857
+  type: 'test'
+  ...
+# Subtest: E18: rejected conserva la nota interna sin incluirla en el aviso del alumno
+ok 6 - E18: rejected conserva la nota interna sin incluirla en el aviso del alumno
+  ---
+  duration_ms: 108.28752
+  type: 'test'
+  ...
+# Subtest: E18: nota inválida se rechaza antes de escribir y acepta el límite de 2000 caracteres
+ok 7 - E18: nota inválida se rechaza antes de escribir y acepta el límite de 2000 caracteres
+  ---
+  duration_ms: 202.618352
+  type: 'test'
+  ...
+# Subtest: E18: repetir o competir con notas diferentes no sobrescribe la nota ni duplica efectos
+ok 8 - E18: repetir o competir con notas diferentes no sobrescribe la nota ni duplica efectos
+  ---
+  duration_ms: 3058.740578
+  type: 'test'
+  ...
+[error] Error
+# Subtest: E18: una escritura fallida revierte también la nota interna
+ok 9 - E18: una escritura fallida revierte también la nota interna
+  ---
+  duration_ms: 111.497302
+  type: 'test'
+  ...
+# Subtest: E18: explicación estructurada completa y texto siguen siendo compatibles
+ok 10 - E18: explicación estructurada completa y texto siguen siendo compatibles
+  ---
+  duration_ms: 131.607939
+  type: 'test'
+  ...
+# Subtest: E18: repetición y cambio de resolución devuelven 409 sin nuevos efectos
+ok 11 - E18: repetición y cambio de resolución devuelven 409 sin nuevos efectos
+  ---
+  duration_ms: 200.316622
+  type: 'test'
+  ...
+# Subtest: E18: dos confirmaciones simultáneas producen un éxito, un 409 y un único premio
+ok 12 - E18: dos confirmaciones simultáneas producen un éxito, un 409 y un único premio
+  ---
+  duration_ms: 3540.740888
+  type: 'test'
+  ...
+# Subtest: E18: solicitudes distintas del mismo alumno acumulan 500 bronce sin perder saldo
+ok 13 - E18: solicitudes distintas del mismo alumno acumulan 500 bronce sin perder saldo
+  ---
+  duration_ms: 3307.244867
+  type: 'test'
+  ...
+# Subtest: E18: errores de validación no dejan saldo, aviso, estado o pregunta parciales
+ok 14 - E18: errores de validación no dejan saldo, aviso, estado o pregunta parciales
+  ---
+  duration_ms: 226.488066
+  type: 'test'
+  ...
+[error] Error
+# Subtest: E18: fallo al persistir aviso cancela también premio, movimiento, pregunta y resolución
+ok 15 - E18: fallo al persistir aviso cancela también premio, movimiento, pregunta y resolución
+  ---
+  duration_ms: 116.810136
+  type: 'test'
+  ...
+# Subtest: E18: referencias inexistentes o inválidas se rechazan sin resolver ni premiar
+ok 16 - E18: referencias inexistentes o inválidas se rechazan sin resolver ni premiar
+  ---
+  duration_ms: 199.794849
+  type: 'test'
+  ...
+# Subtest: E18: saldo ausente inicia en cero sin tomar badges como bronce; saldo inválido cancela
+ok 17 - E18: saldo ausente inicia en cero sin tomar badges como bronce; saldo inválido cancela
+  ---
+  duration_ms: 328.559365
+  type: 'test'
+  ...
+# Subtest: E18: permisos y tokens inválidos impiden toda escritura
+ok 18 - E18: permisos y tokens inválidos impiden toda escritura
+  ---
+  duration_ms: 167.196298
+  type: 'test'
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 12887.129078

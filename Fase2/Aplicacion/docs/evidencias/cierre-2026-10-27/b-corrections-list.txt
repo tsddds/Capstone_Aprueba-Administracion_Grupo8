@@ -1,0 +1,88 @@
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-59a91449c6e3 Creating 
+ Container aprueba-equipo-test-run-59a91449c6e3 Created 
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E17: admin obtiene solicitudes con referencias exactas y sin modificar datos
+ok 1 - E17: admin obtiene solicitudes con referencias exactas y sin modificar datos
+  ---
+  duration_ms: 536.134445
+  type: 'test'
+  ...
+# Subtest: E17: support obtiene solicitudes con referencias exactas y sin modificar datos
+ok 2 - E17: support obtiene solicitudes con referencias exactas y sin modificar datos
+  ---
+  duration_ms: 108.535703
+  type: 'test'
+  ...
+# Subtest: E17: finance recibe 403 sin solicitudes ni referencias
+ok 3 - E17: finance recibe 403 sin solicitudes ni referencias
+  ---
+  duration_ms: 71.418135
+  type: 'test'
+  ...
+# Subtest: E17: ops recibe 403 sin solicitudes ni referencias
+ok 4 - E17: ops recibe 403 sin solicitudes ni referencias
+  ---
+  duration_ms: 71.116813
+  type: 'test'
+  ...
+# Subtest: E17: student recibe 403 y falta de token 401
+ok 5 - E17: student recibe 403 y falta de token 401
+  ---
+  duration_ms: 7.128912
+  type: 'test'
+  ...
+# Subtest: E17: tokens inválidos, expirados o de refresco no entregan datos
+ok 6 - E17: tokens inválidos, expirados o de refresco no entregan datos
+  ---
+  duration_ms: 5.235476
+  type: 'test'
+  ...
+# Subtest: E17: filtra cada estado y mantiene el contador global de pendientes
+ok 7 - E17: filtra cada estado y mantiene el contador global de pendientes
+  ---
+  duration_ms: 117.933779
+  type: 'test'
+  ...
+# Subtest: E17: página y cursor recorren 106 pendientes sin duplicados y ordenan los empates
+ok 8 - E17: página y cursor recorren 106 pendientes sin duplicados y ordenan los empates
+  ---
+  duration_ms: 300.731221
+  type: 'test'
+  ...
+# Subtest: E17: parámetros inválidos se rechazan sin modificar solicitudes
+ok 9 - E17: parámetros inválidos se rechazan sin modificar solicitudes
+  ---
+  duration_ms: 247.990829
+  type: 'test'
+  ...
+# Subtest: E17: referencias ausentes o inválidas son null sin romper la cola
+ok 10 - E17: referencias ausentes o inválidas son null sin romper la cola
+  ---
+  duration_ms: 96.791158
+  type: 'test'
+  ...
+# Subtest: E17: soporte ve la pregunta vinculada completa y no recibe campos privados de origen
+ok 11 - E17: soporte ve la pregunta vinculada completa y no recibe campos privados de origen
+  ---
+  duration_ms: 99.141828
+  type: 'test'
+  ...
+# Subtest: E17: cola vacía responde 200 con data vacía y metadatos en cero
+ok 12 - E17: cola vacía responde 200 con data vacía y metadatos en cero
+  ---
+  duration_ms: 84.345364
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 12
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 8920.883217

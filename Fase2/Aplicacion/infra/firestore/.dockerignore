@@ -1,0 +1,8 @@
+**
+!package.json
+!package-lock.json
+!firebase.json
+!firebase.test.json
+!firestore.rules
+!start.mjs
+!Dockerfile

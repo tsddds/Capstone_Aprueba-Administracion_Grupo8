@@ -1,0 +1,44 @@
+[
+  {
+    "Service": "backend",
+    "Name": "aprueba-equipo-backend-1",
+    "State": "running",
+    "Health": "healthy",
+    "Image": "aprueba-equipo-backend"
+  },
+  {
+    "Service": "firestore",
+    "Name": "aprueba-equipo-firestore-1",
+    "State": "running",
+    "Health": "healthy",
+    "Image": "aprueba-equipo-firestore"
+  },
+  {
+    "Service": "firestore-test",
+    "Name": "aprueba-equipo-firestore-test-1",
+    "State": "running",
+    "Health": "healthy",
+    "Image": "aprueba-equipo-firestore-test"
+  },
+  {
+    "Service": "frontend",
+    "Name": "aprueba-equipo-frontend-1",
+    "State": "running",
+    "Health": "",
+    "Image": "aprueba-equipo-frontend"
+  },
+  {
+    "Service": "ops-bridge",
+    "Name": "aprueba-equipo-ops-bridge-1",
+    "State": "running",
+    "Health": "",
+    "Image": "aprueba-equipo-ops-bridge"
+  },
+  {
+    "Service": "ops-lab",
+    "Name": "aprueba-ops-lab",
+    "State": "running",
+    "Health": "healthy",
+    "Image": "aprueba-equipo-ops-lab"
+  }
+]

@@ -1,0 +1,13 @@
+import { Router } from 'express';
+import { ok, created, noContent } from '../lib/envelope.js';
+import { requireRole } from '../middleware/auth.js';
+import { adminRoute, identifier, pick } from '../lib/admin-validation.js';
+import { COL, listAll } from '../data/repo.js';
+import { createPlan, updatePlan, removePlan, publicPlan } from '../services/plans/catalog.js';
+const r = Router();
+r.get('/features', requireRole('admin'), adminRoute(async (_req, res) => ok(res, (await listAll(COL.features)).map(f => pick(f,['id','name','name_es','name_en'])))));
+r.get('/plans', requireRole('admin'), adminRoute(async (_req, res) => ok(res, (await listAll(COL.plans)).map(publicPlan))));
+r.post('/plans', requireRole('admin'), adminRoute(async (req, res) => created(res, await createPlan(req.body, req.user))));
+r.put('/plans/:id', requireRole('admin'), adminRoute(async (req, res) => ok(res, await updatePlan(identifier(req.params.id), req.body, req.user))));
+r.delete('/plans/:id', requireRole('admin'), adminRoute(async (req, res) => { await removePlan(identifier(req.params.id), req.user); return noContent(res); }));
+export default r;

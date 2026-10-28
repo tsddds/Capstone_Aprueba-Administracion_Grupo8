@@ -1,0 +1,8 @@
+**
+!package.json
+!package-lock.json
+!src/**
+!dev/**
+!test/**
+!Dockerfile.dev
+src/seed/**
