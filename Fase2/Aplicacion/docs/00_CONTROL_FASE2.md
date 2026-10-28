@@ -14,7 +14,7 @@ Las últimas correcciones incorporan la nota interna de recorrecciones, la reser
 
 La [planilla grupal](seguimiento/01_Seguimiento_Grupal_Fase2.xlsx) reúne los 27 endpoints, responsables, pruebas y revisión de pares. Las demás matrices mantienen backlog, riesgos, planificación, requisitos, inventario y defectos. Las guías individuales de preparación se retiraron del paquete actual después de consolidar sus instrucciones técnicas.
 
-El [informe final](informe-final/2.6_Informe_Final_Proyecto_APT_Aprueba_Administracion.docx) describe el desarrollo y sus evidencias según la guía 2.6. El PPT y el guion conservan el corte de la presentación del 20/10.
+El [informe final](informe-final/2.6_Informe_Final_Proyecto_APT_Aprueba_Administracion.docx) describe el desarrollo y sus evidencias según la guía 2.6. El PPT conserva el corte de la presentación del 20/10.
 
 ## Pendientes de cierre
 

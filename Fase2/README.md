@@ -11,7 +11,7 @@ Estado al 28 de octubre de 2026: desarrollo avanzado, con integración y comprob
 - [Pruebas del 27/10](Aplicacion/docs/evidencias/cierre-2026-10-27/resumen.json), con comandos, logs y capturas en la misma carpeta. Resultado: 214 aprobadas, cero fallos y cero omitidas; compilación aparte. No es un porcentaje de cobertura ni una nueva ejecución del 28/10.
 - [Modelo de datos](Aplicacion/docs/19_MODELO_DATOS_FIRESTORE.md), [clases del dominio](Aplicacion/docs/20_DIAGRAMA_CLASES_DOMINIO.md) y [aporte del proyecto](Aplicacion/docs/21_INNOVACION_Y_APORTE.md).
 - [Contexto y alcance](Aplicacion/docs/22_CONTEXTO_Y_ALCANCE.md): problema, justificación, límites e interesados.
-- [Presentación y guion](Evidencias_grupales/Presentacion), con capturas y anexos. Conservan el corte histórico del 20/10 y sus 199 pruebas, no el resultado posterior de 214.
+- [Presentación](Evidencias_grupales/Presentacion), con capturas y anexos. Conserva el corte histórico del 20/10 y sus 199 pruebas, no el resultado posterior de 214.
 - [Diarios individuales pendientes](Evidencias_individuales/README.md).
 
 ## Pendientes de aceptación

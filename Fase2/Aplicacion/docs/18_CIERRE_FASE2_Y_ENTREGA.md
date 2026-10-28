@@ -127,7 +127,7 @@ Fuentes: [configuración de cron](https://vercel.com/docs/cron-jobs), [protecci�
 3. Reunir una revisión real del incremento: qué se acepta, qué queda pendiente, responsables y fecha acordada. Registrar la retrospectiva o acuerdos que efectivamente se hagan. No completar minutas retroactivas como si hubieran ocurrido.
 4. Abrir el informe `docs/informe-final/2.6_Informe_Final_Proyecto_APT_Aprueba_Administracion.docx`. Revisar nombres, competencias oficiales y la sección 6. Cada integrante escribe su reflexión final con un aprendizaje, dificultad, evidencia de aporte y proyección. Los antecedentes de Fase 1 sirven de base; no equivalen a una reflexión final confirmada.
 5. Actualizar resultados externos y pendientes del informe después de ejecutarlos. Los seis Excel son el seguimiento operativo; la rúbrica académica la completa el docente.
-6. Conservar el PPT y guion elegidos como apoyo para la presentación. Tienen su fecha y no reemplazan este informe. Si se usan cifras actuales en la defensa, citar las 214 pruebas del nuevo corte y explicar los pendientes.
+6. Conservar el PPT elegido como apoyo para la presentación. Tiene su fecha y no reemplaza este informe. Si se usan cifras actuales en la defensa, citar las 214 pruebas del nuevo corte y explicar los pendientes.
 
 ## 8. Publicación y entrega
 

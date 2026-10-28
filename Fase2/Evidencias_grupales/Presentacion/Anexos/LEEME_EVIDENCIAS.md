@@ -4,7 +4,7 @@ Corte: 20 de octubre de 2026. Estas evidencias respaldan la presentación de eva
 
 ## Versión vigente reorganizada
 
-Usar `Aprueba_Avance_Evaluacion_2_Reorganizado_2026-10-20.pptx` y su guion Word con el mismo identificador Reorganizado. La versión anterior quedó abierta en PowerPoint y no se forzó su reemplazo. El nuevo orden tiene quince diapositivas principales y siete anexos ocultos, con objetivo de 12 minutos y 10 segundos antes de ensayo.
+Usar `Aprueba_Avance_Evaluacion_2_Reorganizado_2026-10-20.pptx`. La versión anterior quedó abierta en PowerPoint y no se forzó su reemplazo. El nuevo orden tiene quince diapositivas principales y siete anexos ocultos, con objetivo de 12 minutos y 10 segundos antes de ensayo.
 
 - 1–3: presentación, problema, objetivo, alcance y arquitectura.
 - 4–7: Docker, herramientas utilizadas, base de datos y almacenamiento, metodología, reparto y sprints.
@@ -23,7 +23,7 @@ La preparación añadió dos alumnos, dos tickets y dos recorrecciones de demost
 
 ## Regresión completa actualizada
 
-`Regresion_Actualizada/resultados.json` contiene 22 comandos, con 199 ejecuciones de pruebas aprobadas y build del frontend aprobado. Se volvió a ejecutar el mismo código, no se modificó para preparar la presentación. El primer recorrido se detuvo en E14 por una solicitud concurrente de correo que terminó por tiempo de espera. Se conserva ese log y el resultado inicial en `Regresion_Actualizada/Intento_Inicial`. El reintento aislado aprobó 7/7 sin cambiar código, y después se completaron las suites restantes. No se ha demostrado una causa del timeout ni se considera resuelto por el reintento. Las pruebas de concurrencia requieren revisión y la incidencia permanece en la presentación y el guion.
+`Regresion_Actualizada/resultados.json` contiene 22 comandos, con 199 ejecuciones de pruebas aprobadas y build del frontend aprobado. Se volvió a ejecutar el mismo código, no se modificó para preparar la presentación. El primer recorrido se detuvo en E14 por una solicitud concurrente de correo que terminó por tiempo de espera. Se conserva ese log y el resultado inicial en `Regresion_Actualizada/Intento_Inicial`. El reintento aislado aprobó 7/7 sin cambiar código, y después se completaron las suites restantes. No se ha demostrado una causa del timeout ni se considera resuelto por el reintento. Las pruebas de concurrencia requieren revisión y la incidencia permanece en la presentación.
 
 La nota interna opcional E18 y la aceptación externa de Stripe test siguen pendientes. Las 199 ejecuciones no significan cobertura total ni aceptación final. Los registros históricos y las 17 repeticiones anteriores permanecen como evidencia previa, sin sumarlos como casos nuevos.
 
@@ -101,4 +101,4 @@ El resultado esperado de una prueba debe contrastarse con su aserción en el arc
 
 ## Para llevarlo a clase
 
-Conservar la carpeta Anexos junto al PowerPoint y al guion Word. El PPT incorpora las imágenes, por lo que se puede exponer sin abrir esta carpeta ni depender de Internet. Los archivos de texto y JSON permiten responder preguntas técnicas. Si se hará demostración en vivo, ensayar previamente y mantener las capturas como respaldo.
+Conservar la carpeta Anexos junto al PowerPoint. El PPT incorpora las imágenes, por lo que se puede exponer sin abrir esta carpeta ni depender de Internet. Los archivos de texto y JSON permiten responder preguntas técnicas. Si se hará demostración en vivo, ensayar previamente y mantener las capturas como respaldo.
