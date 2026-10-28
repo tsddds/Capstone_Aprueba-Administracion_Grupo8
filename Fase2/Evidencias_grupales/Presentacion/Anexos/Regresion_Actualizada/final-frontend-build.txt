@@ -1,0 +1,21 @@
+
+> aprueba-admin-frontend@1.0.0 build
+> vite build
+
+vite v5.4.21 building for production...
+transforming...
+✓ 52 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.70 kB │ gzip:  0.41 kB
+dist/assets/index-CpXsPVWh.css   15.86 kB │ gzip:  4.05 kB
+dist/assets/index-BYmpcdbc.js   284.72 kB │ gzip: 86.94 kB
+✓ built in 1.57s
+
+ Container aprueba-equipo-frontend-run-ab0dea542cfc Creating 
+ Container aprueba-equipo-frontend-run-ab0dea542cfc Created 
+npm notice
+npm notice New major version of npm available! 10.9.9 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

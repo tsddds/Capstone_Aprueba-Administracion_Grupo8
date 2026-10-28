@@ -1,0 +1,96 @@
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E18: admin confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+ok 1 - E18: admin confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+  ---
+  duration_ms: 739.361655
+  type: 'test'
+  ...
+# Subtest: E18: support confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+ok 2 - E18: support confirma y acredita exactamente 250 bronce con aviso y movimiento únicos
+  ---
+  duration_ms: 182.22697
+  type: 'test'
+  ...
+# Subtest: E18: rechazar no cambia medallas ni pregunta y también guarda aviso
+ok 3 - E18: rechazar no cambia medallas ni pregunta y también guarda aviso
+  ---
+  duration_ms: 156.055624
+  type: 'test'
+  ...
+# Subtest: E18: confirmación sin parche conserva la pregunta completa
+ok 4 - E18: confirmación sin parche conserva la pregunta completa
+  ---
+  duration_ms: 125.551937
+  type: 'test'
+  ...
+# Subtest: E18: explicación estructurada completa y texto siguen siendo compatibles
+ok 5 - E18: explicación estructurada completa y texto siguen siendo compatibles
+  ---
+  duration_ms: 182.909607
+  type: 'test'
+  ...
+# Subtest: E18: repetición y cambio de resolución devuelven 409 sin nuevos efectos
+ok 6 - E18: repetición y cambio de resolución devuelven 409 sin nuevos efectos
+  ---
+  duration_ms: 268.895459
+  type: 'test'
+  ...
+# Subtest: E18: dos confirmaciones simultáneas producen un éxito, un 409 y un único premio
+ok 7 - E18: dos confirmaciones simultáneas producen un éxito, un 409 y un único premio
+  ---
+  duration_ms: 2855.094168
+  type: 'test'
+  ...
+# Subtest: E18: solicitudes distintas del mismo alumno acumulan 500 bronce sin perder saldo
+ok 8 - E18: solicitudes distintas del mismo alumno acumulan 500 bronce sin perder saldo
+  ---
+  duration_ms: 3110.177562
+  type: 'test'
+  ...
+# Subtest: E18: errores de validación no dejan saldo, aviso, estado o pregunta parciales
+ok 9 - E18: errores de validación no dejan saldo, aviso, estado o pregunta parciales
+  ---
+  duration_ms: 299.939333
+  type: 'test'
+  ...
+# Subtest: E18: fallo al persistir aviso cancela también premio, movimiento, pregunta y resolución
+ok 10 - E18: fallo al persistir aviso cancela también premio, movimiento, pregunta y resolución
+  ---
+  duration_ms: 141.156009
+  type: 'test'
+  ...
+# Subtest: E18: referencias inexistentes o inválidas se rechazan sin resolver ni premiar
+ok 11 - E18: referencias inexistentes o inválidas se rechazan sin resolver ni premiar
+  ---
+  duration_ms: 300.561324
+  type: 'test'
+  ...
+# Subtest: E18: saldo ausente inicia en cero sin tomar badges como bronce; saldo inválido cancela
+ok 12 - E18: saldo ausente inicia en cero sin tomar badges como bronce; saldo inválido cancela
+  ---
+  duration_ms: 580.906344
+  type: 'test'
+  ...
+# Subtest: E18: permisos y tokens inválidos impiden toda escritura
+ok 13 - E18: permisos y tokens inválidos impiden toda escritura
+  ---
+  duration_ms: 224.241534
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10067.818886
+
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-7c05fc9d6d3b Creating 
+ Container aprueba-equipo-test-run-7c05fc9d6d3b Created 
+[error] Error

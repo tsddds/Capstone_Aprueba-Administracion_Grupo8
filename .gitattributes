@@ -1,5 +1,5 @@
 # Conservar las fuentes y registros tal como se verificaron, sin convertir saltos de línea.
-Fase2/Aplicacion/** -text
+Fase2/** -text
 *.docx binary
 *.xlsx binary
 *.pptx binary

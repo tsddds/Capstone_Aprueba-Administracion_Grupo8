@@ -1,0 +1,59 @@
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E23-E27 matriz de permisos y ausencia de token
+ok 1 - E23-E27 matriz de permisos y ausencia de token
+  ---
+  duration_ms: 735.587625
+  type: 'test'
+  ...
+# Subtest: E25 rechaza formas, precio, límites, funcionalidades y campos desconocidos sin persistencia
+ok 2 - E25 rechaza formas, precio, límites, funcionalidades y campos desconocidos sin persistencia
+  ---
+  duration_ms: 437.736435
+  type: 'test'
+  ...
+# Subtest: E25/E26 crea plan gratuito, conserva cero ilimitado y campos internos al editar
+ok 3 - E25/E26 crea plan gratuito, conserva cero ilimitado y campos internos al editar
+  ---
+  duration_ms: 213.931923
+  type: 'test'
+  ...
+# Subtest: E26 valida resultado completo y no persiste un patch inválido
+ok 4 - E26 valida resultado completo y no persiste un patch inválido
+  ---
+  duration_ms: 210.554855
+  type: 'test'
+  ...
+# Subtest: E27 suscripción real bloquea incluso con cuenta suspendida o plan administrativo distinto
+ok 5 - E27 suscripción real bloquea incluso con cuenta suspendida o plan administrativo distinto
+  ---
+  duration_ms: 101.664748
+  type: 'test'
+  ...
+# Subtest: E27 canceladas y vencidas no bloquean; 204 sin cuerpo y 404 posterior
+ok 6 - E27 canceladas y vencidas no bloquean; 204 sin cuerpo y 404 posterior
+  ---
+  duration_ms: 134.767692
+  type: 'test'
+  ...
+# Subtest: E27 una suscripción activa sin vencimiento bloquea hasta verificar sus datos
+ok 7 - E27 una suscripción activa sin vencimiento bloquea hasta verificar sus datos
+  ---
+  duration_ms: 115.739147
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6491.080279
+
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-e9b33d45c428 Creating 
+ Container aprueba-equipo-test-run-e9b33d45c428 Created 

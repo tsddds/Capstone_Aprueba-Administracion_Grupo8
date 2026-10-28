@@ -1,89 +1,74 @@
-# Aprueba Administración Backend
+# Aprueba Administración
 
-Proyecto Capstone del Grupo 8 de Ingeniería en Informática, Duoc UC, año 2026.
+Proyecto Capstone del Grupo 8 de Ingeniería en Informática, Duoc UC, 2026. Integrantes: Tsung-Hao Liu, Catalina Padilla y Felipe Rojas.
 
-**Estado actual:** definición y planificación de Fase 1. Este repositorio reúne las evidencias académicas del equipo. La API funcionando, las pruebas ejecutadas y el despliegue son resultados esperados de las fases de desarrollo, no resultados ya realizados.
+**Estado al 28 de octubre de 2026: Fase 2 en desarrollo avanzado.** El equipo integró los tres bloques y comprobó la ejecución en Docker local. El corte del 27/10 registra 214 pruebas automatizadas aprobadas, sin fallos ni omisiones, y la compilación del cliente. La aceptación externa, la revisión del equipo y los diarios individuales siguen pendientes.
 
-## Descripción del proyecto
+## Proyecto y alcance
 
-El proyecto consiste en desarrollar el backend de Aprueba Administración. Está dirigido a los usuarios que administran el negocio y realizan labores de soporte, finanzas y operación. Busca centralizar las operaciones administrativas, aplicar reglas de negocio y controlar el acceso a la información mediante validaciones y permisos.
+La API centraliza acceso administrativo, métricas, patrocinadores, plataformas, servicios, contenedores, usuarios, tickets, recorrecciones, preguntas, funcionalidades y planes. El alcance son los 27 endpoints de la sección 4 del contrato original. La interfaz React permite demostrar las operaciones del backend. La aplicación del alumno y el generador quedan fuera de esta entrega.
 
-El alcance comprende los **27 endpoints `/admin` de la sección 4, Consola de administración, de `Aprueba_API_Backend.docx`**, junto con las convenciones generales necesarias de respuestas, errores, autenticación, autorización, paginación y validación.
+El [contexto del proyecto](Fase2/Aplicacion/docs/22_CONTEXTO_Y_ALCANCE.md) reúne el problema, la justificación y los interesados. El propósito es aplicar permisos y reglas comunes a las operaciones administrativas y comprobar su persistencia; todavía no se ha medido un impacto comercial en la empresa.
 
-Las operaciones abarcan acceso administrativo, métricas, patrocinadores, plataformas, servicios, contenedores, usuarios, tickets de soporte, correcciones, preguntas, funcionalidades y planes. El documento funcional de referencia no se publica en este repositorio.
+## Documentación por fase
 
-No se incluye la aplicación del alumno, su sitio web, el generador ni un frontend administrativo completo. Si es necesario, se podrá crear una interfaz mínima para demostrar la API. La entrega y validación se concentrarán en el backend y estarán a cargo del docente.
+- [Fase 1](Fase1/Evidencias_grupales): definición, evidencias académicas, requisitos, historias, Scrum y arquitectura. Los archivos entregados mantienen su historia.
+- [Product Vision](Fase1/Evidencias_grupales/anexo/01_Inicio/03_Product_Vision_Criterios_Exito.docx): actualización al alcance de 27 endpoints y cinco sprints, con fecha de revisión documental del 28/10.
+- [Fase 2](Fase2/README.md): guía 2.4, informe 2.6 preparado, seis planillas, aplicación, pruebas, presentación y pendientes.
 
-## Tecnologías utilizadas
+## Herramientas utilizadas
 
-- **Control de versiones y repositorio académico:** Git y GitHub.
-- **Interfaz definida por el contrato:** API HTTP con intercambio de datos JSON.
-- **Lenguaje de programación y framework:** pendientes de recibir y revisar el repositorio vigente.
-- **Base de datos:** será entregada posteriormente por la empresa o el docente; el sistema y los accesos están pendientes.
-- **Nube y servicios externos:** pendientes de confirmación.
-- **Herramientas de pruebas, automatización y despliegue:** se definirán conforme al entorno vigente y a los requisitos académicos.
-
-El código antiguo no se considera evidencia del estado actual. Tampoco se presenta ningún proveedor o tecnología de infraestructura como una decisión ya confirmada.
+JavaScript, Node.js, Express, Firebase Admin SDK y Cloud Firestore para el backend; React y Vite para la demostración; Docker Compose y emuladores Firebase para desarrollo y pruebas; pruebas automatizadas con `node:test`; Git y GitHub para integración y documentación. Vercel aloja el despliegue previamente preparado; esta publicación académica no lo actualiza. Stripe se utiliza como integración de precios en modo de pruebas, con aceptación externa pendiente.
 
 ## Ejecución local
 
-**La ejecución de la API está pendiente.** Este repositorio todavía no contiene una versión vigente y ejecutable del backend, por lo que no dispone de comandos de instalación, arranque o pruebas verificados.
+Requisitos: Git y Docker Desktop con motor Linux iniciado. No se necesitan credenciales de Firebase remoto para el entorno local. Desde una terminal:
 
-Para descargar las evidencias, se necesita Git instalado:
-
-```bash
+```powershell
 git clone https://github.com/tsddds/Capstone_Aprueba-Administracion_Grupo8.git
-cd Capstone_Aprueba-Administracion_Grupo8
+cd Capstone_Aprueba-Administracion_Grupo8/Fase2/Aplicacion
+docker compose -f compose.yaml -f compose.ops.yaml --profile ui up -d --build
+docker compose -f compose.yaml -f compose.ops.yaml ps
 ```
 
-Estos comandos descargan la documentación; **no ponen en marcha la API**.
+Abrir la aplicación en http://localhost:5173, la API en http://localhost:4000/health y el visor de datos en http://localhost:4001/firestore. Las cuentas ficticias están indicadas en el login. Desarrollo utiliza `demo-aprueba-equipo`, con volumen persistente. Las pruebas usan `demo-aprueba-tests`, separado. La semilla conserva los documentos existentes. No ejecutar ambos repositorios a la vez con los mismos puertos.
 
-Cuando se reciba el repositorio vigente, esta sección se completará con los requisitos y versiones, la instalación de dependencias, la configuración de variables de entorno, la conexión a una base de pruebas, los comandos exactos de arranque y pruebas, y la dirección local para verificar el funcionamiento. También se documentará el procedimiento de contenedores requerido por el instructivo o la alternativa que acepte expresamente el docente.
+Para detener el proyecto sin borrar sus datos:
 
-Las credenciales y los datos reales no deben publicarse. La configuración de ejemplo deberá contener únicamente nombres de variables y valores ficticios.
+```powershell
+docker compose -f compose.yaml -f compose.ops.yaml stop
+```
 
-## Integrantes y roles
+El laboratorio incluye un puente con acceso al daemon Docker, restringido al contenedor de pruebas autorizado. Debe ejecutarse únicamente en desarrollo local; sus límites están en [el manual de operación](Fase2/Aplicacion/docs/03_DATOS_Y_CONTRATOS_INTERNOS.md#laboratorio-operativo).
 
-La distribución corresponde a responsabilidades planificadas. Los tres integrantes colaborarán en el desarrollo del backend y combinarán funciones según las necesidades del proyecto.
+## Pruebas y calidad
 
-- **Tsung-Hao Liu:** gestión del proyecto y facilitación de Scrum; desarrollo de la API, autenticación, autorización y seguridad; participación en integración y despliegue.
-- **Catalina Yanara Padilla Astudillo:** Product Owner y análisis de negocio; definición de requisitos, priorización del backlog, criterios de aceptación y documentación.
-- **Felipe Antonio Rojas Riffo:** arquitectura y datos; calidad y automatización de pruebas; gestión de configuración y versiones, integración y preparación del despliegue.
+El [resumen del 27/10](Fase2/Aplicacion/docs/evidencias/cierre-2026-10-27/resumen.json) y los [resultados por comando](Fase2/Aplicacion/docs/evidencias/cierre-2026-10-27/resultados.json) conservan el registro de ejecución. Hay pruebas de permisos, validación, persistencia, concurrencia e integración. El total incluye escenarios compartidos entre suites y no equivale a cobertura completa.
 
-Las responsabilidades detalladas se encuentran en las hojas de roles y RACI del [plan de trabajo y Carta Gantt](Fase1/Evidencias_grupales/03_Plan_Trabajo_Carta_Gantt_y_RACI.xlsx).
+Para repetir la verificación conjunta, con Node.js instalado además de Docker, ejecutar desde `Fase2/Aplicacion`:
 
-## Metodología de trabajo
+```powershell
+node backend/dev/verify-phase2.mjs --output .local/verificacion-equipo
+```
 
-El equipo utilizará Scrum para desarrollar y revisar la API mediante incrementos. El Product Backlog será la lista priorizada del trabajo. En cada sprint se definirá un objetivo, se seleccionarán las tareas, se desarrollará y probará el incremento, se revisarán los resultados y se realizará una retrospectiva.
+Usar una carpeta de salida nueva. La [guía de pruebas](Fase2/Aplicacion/docs/04_PRUEBAS_Y_ACEPTACION.md) también explica las suites por separado. Los resultados de Stripe usan un proveedor simulado; falta la comprobación en sandbox externo.
 
-La planificación contempla **18 semanas**:
+## Equipo y metodología
 
-- **Semanas 1 a 4:** definición, requisitos, diseño y preparación del trabajo.
-- **Semanas 5 a 15:** cinco sprints de desarrollo incremental del backend.
-- **Semanas 16 a 18:** estabilización, despliegue, transición, demostración y defensa.
+Los tres integrantes desarrollan backend, con módulos relacionados para reducir cambios simultáneos sobre los mismos archivos:
 
-La Carta Gantt complementa la planificación con tiempos, dependencias y responsables. La calidad, la seguridad, los riesgos y la documentación se gestionarán durante todo el proyecto. Los resultados de pruebas y los acuerdos de revisión se registrarán cuando ocurran.
+- Tsung-Hao: autenticación, usuarios, soporte, plataformas y operación; 10 endpoints.
+- Catalina: patrocinadores, preguntas y recorrecciones; 10 endpoints.
+- Felipe: funcionalidades, planes y métricas; 7 endpoints.
 
-## Arquitectura de la solución
+Scrum organiza el trabajo en cinco sprints. El [plan de sprints](Fase2/Aplicacion/docs/02_SPRINTS_Y_BACKLOG.md), el Product Backlog y el [seguimiento grupal](Fase2/Aplicacion/docs/seguimiento/README.md) reúnen tareas, responsables y criterios. La Definition of Done requiere pruebas, documentación y revisión de otro integrante. Las aprobaciones y retrospectivas se registran cuando ocurren.
 
-La arquitectura propuesta separa tres responsabilidades: la entrada HTTP que recibe las solicitudes, los servicios que aplican las reglas del negocio y los permisos, y la capa de acceso a datos que se conectará con la base entregada por la contraparte.
+## Arquitectura y datos
 
-Por ejemplo, una consulta administrativa deberá comprobar la identidad y los permisos del solicitante, validar los parámetros, recuperar la información autorizada y devolver una respuesta conforme al contrato. La gestión de errores, el registro de operaciones y la protección de credenciales se aplicarán de forma transversal.
+El cliente React realiza solicitudes a Express. Las rutas aplican autenticación, permisos y validación; los módulos de negocio coordinan las operaciones y acceden a Firestore mediante Firebase Admin SDK. Las integraciones de métricas, precios y operación se mantienen separadas. Docker ejecuta el cliente, el backend, el emulador y el laboratorio dedicado.
 
-El acceso a datos y a servicios externos se organizará mediante componentes de conexión separados de la lógica del negocio. Esta es una propuesta de diseño, no una descripción verificada del código vigente. Su implementación concreta se ajustará al recibir los insumos técnicos.
+El [modelo de datos Firestore](Fase2/Aplicacion/docs/19_MODELO_DATOS_FIRESTORE.md) describe colecciones, referencias y transacciones. El [diagrama de clases del dominio](Fase2/Aplicacion/docs/20_DIAGRAMA_CLASES_DOMINIO.md) representa sus relaciones principales. La [explicación del aporte](Fase2/Aplicacion/docs/21_INNOVACION_Y_APORTE.md) vincula las funciones con su evidencia local.
 
-## Evidencias de Fase 1
+## Próximos pasos
 
-La carpeta [Evidencias grupales](Fase1/Evidencias_grupales) contiene únicamente:
-
-1. [Plan de trabajo, Carta Gantt y RACI](Fase1/Evidencias_grupales/03_Plan_Trabajo_Carta_Gantt_y_RACI.xlsx).
-2. [Presentación de Fase 1](Fase1/Evidencias_grupales/02_Presentacion_Proyecto_Fase1_Aprueba_Administracion.pptx), versión corregida de 11 diapositivas.
-3. [APT Formativa Fase 1](Fase1/Evidencias_grupales/1.4_APT122_FormativaFase1.docx).
-4. [Guía de estudiante y definición del proyecto APT](Fase1/Evidencias_grupales/1.5_GuiaEstudiante_Fase%201_Definicion%20Proyecto%20APT.docx).
-5. [Planilla de evaluación Fase 1](Fase1/Evidencias_grupales/PLANILLA%20DE%20EVALUACI%C3%93N%20FASE%201.xlsx).
-
-Las autoevaluaciones y los diarios de reflexión de cada integrante se encuentran en [Evidencias individuales](Fase1/Evidencias_individuales).
-
-## Resultado esperado
-
-Al finalizar el proyecto se espera una API administrativa funcionando, entornos de prueba y producción, pruebas automatizadas y una demostración mediante solicitudes reproducibles. La evaluación corresponderá al docente. En Fase 1 se presenta la definición y planificación necesarias para avanzar hacia ese resultado.
+Completar los tres diarios individuales 2.1; realizar revisión de pares y recepción en los computadores de los compañeros; aceptar Stripe sandbox; configurar y verificar la agenda remota y los servicios autorizados; revisar el informe y registrar la entrega académica. Los pasos están en [cierre y entrega](Fase2/Aplicacion/docs/18_CIERRE_FASE2_Y_ENTREGA.md). Publicar el avance no equivale a cerrar la fase ni a aprobar la evaluación.

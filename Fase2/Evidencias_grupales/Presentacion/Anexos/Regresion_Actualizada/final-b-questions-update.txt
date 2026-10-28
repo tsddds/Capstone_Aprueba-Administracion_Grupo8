@@ -1,0 +1,95 @@
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E21: actualiza parcialmente y conserva explanation omitida y datos de origen
+ok 1 - E21: actualiza parcialmente y conserva explanation omitida y datos de origen
+  ---
+  duration_ms: 836.141707
+  type: 'test'
+  ...
+# Subtest: E21: valida la coherencia con opciones y respuesta ya guardadas
+ok 2 - E21: valida la coherencia con opciones y respuesta ya guardadas
+  ---
+  duration_ms: 195.312626
+  type: 'test'
+  ...
+# Subtest: E21: edita los cinco campos estructurados y conserva compatibilidad con texto
+ok 3 - E21: edita los cinco campos estructurados y conserva compatibilidad con texto
+  ---
+  duration_ms: 202.077409
+  type: 'test'
+  ...
+# Subtest: E21: admite los estados, niveles y pruebas del contrato
+ok 4 - E21: admite los estados, niveles y pruebas del contrato
+  ---
+  duration_ms: 388.25912
+  type: 'test'
+  ...
+# Subtest: E21: cambios concurrentes no dejan una respuesta fuera de las opciones
+ok 5 - E21: cambios concurrentes no dejan una respuesta fuera de las opciones
+  ---
+  duration_ms: 2637.038182
+  type: 'test'
+  ...
+# Subtest: E21: finance recibe 403 sin modificar preguntas
+ok 6 - E21: finance recibe 403 sin modificar preguntas
+  ---
+  duration_ms: 101.557643
+  type: 'test'
+  ...
+# Subtest: E21: support recibe 403 sin modificar preguntas
+ok 7 - E21: support recibe 403 sin modificar preguntas
+  ---
+  duration_ms: 92.738147
+  type: 'test'
+  ...
+# Subtest: E21: ops recibe 403 sin modificar preguntas
+ok 8 - E21: ops recibe 403 sin modificar preguntas
+  ---
+  duration_ms: 98.006773
+  type: 'test'
+  ...
+# Subtest: E21: student recibe 403 y sin token recibe 401 sin alterar datos
+ok 9 - E21: student recibe 403 y sin token recibe 401 sin alterar datos
+  ---
+  duration_ms: 17.384678
+  type: 'test'
+  ...
+# Subtest: E21: rechaza vacíos, valores inválidos, campos ajenos y explanation incompleta sin cambios parciales
+ok 10 - E21: rechaza vacíos, valores inválidos, campos ajenos y explanation incompleta sin cambios parciales
+  ---
+  duration_ms: 969.388174
+  type: 'test'
+  ...
+# Subtest: E21: inexistente devuelve 404 e identificadores inválidos 400 sin crear preguntas
+ok 11 - E21: inexistente devuelve 404 e identificadores inválidos 400 sin crear preguntas
+  ---
+  duration_ms: 121.743945
+  type: 'test'
+  ...
+# Subtest: E21: no publica datos heredados incoherentes aunque el cambio recibido sea válido
+ok 12 - E21: no publica datos heredados incoherentes aunque el cambio recibido sea válido
+  ---
+  duration_ms: 95.36151
+  type: 'test'
+  ...
+# Subtest: E21: permite revisar la pregunta original de Biología b1 sin cambiar su prueba
+ok 13 - E21: permite revisar la pregunta original de Biología b1 sin cambiar su prueba
+  ---
+  duration_ms: 112.527173
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7224.409553
+
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-27d71c78a1f3 Creating 
+ Container aprueba-equipo-test-run-27d71c78a1f3 Created 

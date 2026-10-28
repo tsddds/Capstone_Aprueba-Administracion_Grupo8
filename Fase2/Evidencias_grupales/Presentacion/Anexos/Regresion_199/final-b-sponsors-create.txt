@@ -1,0 +1,65 @@
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E05: admin crea sponsor, persiste los beneficios y puede recuperarlo en el listado
+ok 1 - E05: admin crea sponsor, persiste los beneficios y puede recuperarlo en el listado
+  ---
+  duration_ms: 646.978673
+  type: 'test'
+  ...
+# Subtest: E05: todos los niveles admiten aporte cero y beneficios opcionales
+ok 2 - E05: todos los niveles admiten aporte cero y beneficios opcionales
+  ---
+  duration_ms: 136.589715
+  type: 'test'
+  ...
+# Subtest: E05: finance no puede crear sponsors ni modificar datos
+ok 3 - E05: finance no puede crear sponsors ni modificar datos
+  ---
+  duration_ms: 92.559261
+  type: 'test'
+  ...
+# Subtest: E05: support no puede crear sponsors ni modificar datos
+ok 4 - E05: support no puede crear sponsors ni modificar datos
+  ---
+  duration_ms: 87.574683
+  type: 'test'
+  ...
+# Subtest: E05: ops no puede crear sponsors ni modificar datos
+ok 5 - E05: ops no puede crear sponsors ni modificar datos
+  ---
+  duration_ms: 88.851954
+  type: 'test'
+  ...
+# Subtest: E05: student recibe 403 y sin token recibe 401; no se escriben datos
+ok 6 - E05: student recibe 403 y sin token recibe 401; no se escriben datos
+  ---
+  duration_ms: 18.11941
+  type: 'test'
+  ...
+# Subtest: E05: rechaza cuerpos, campos obligatorios y tipos inválidos sin persistir
+ok 7 - E05: rechaza cuerpos, campos obligatorios y tipos inválidos sin persistir
+  ---
+  duration_ms: 352.340145
+  type: 'test'
+  ...
+# Subtest: E05: valida cada beneficio antes de escribir el sponsor completo
+ok 8 - E05: valida cada beneficio antes de escribir el sponsor completo
+  ---
+  duration_ms: 368.995374
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10697.560473
+
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-adeff6b76518 Creating 
+ Container aprueba-equipo-test-run-adeff6b76518 Created 

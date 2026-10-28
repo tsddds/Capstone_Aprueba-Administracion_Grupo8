@@ -1,0 +1,337 @@
+{
+  "at": "2026-10-20T18:27:36.022Z",
+  "environment": "local / demo-aprueba-equipo / Chrome 1440x1000",
+  "browserRouting": "Browser plugin not available",
+  "checks": [
+    {
+      "path": "/auth/login",
+      "method": "POST",
+      "status": 200,
+      "result": "authenticated; tokens intentionally omitted"
+    },
+    {
+      "path": "/users/usr_apt_20261020_demo",
+      "method": "GET",
+      "status": 200,
+      "response": {
+        "data": {
+          "id": "usr_apt_20261020_demo",
+          "name": "Alumno demostración APT",
+          "email": "usr_apt_20261020_demo@example.test",
+          "country": "CL",
+          "plan": "free",
+          "state": "active",
+          "lastActivity": "2026-10-20T18:27:36.022Z",
+          "badges": 0,
+          "createdAt": "2026-10-20T18:27:36.022Z",
+          "groups": 0,
+          "subscription": null,
+          "medals": {
+            "bronze": 0,
+            "silver": 0,
+            "gold": 0,
+            "diamond": 0,
+            "platinum": 0
+          },
+          "devices": [],
+          "recentActivity": []
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_1d60a42e-e5c",
+          "timestamp": "2026-10-20T18:27:37.587Z"
+        }
+      }
+    },
+    {
+      "path": "/users/usr_apt_20261020_demo",
+      "method": "PATCH",
+      "status": 200,
+      "request": {
+        "state": "suspended",
+        "reason": "Acción rápida desde consola"
+      },
+      "response": {
+        "data": {
+          "id": "usr_apt_20261020_demo",
+          "name": "Alumno demostración APT",
+          "email": "usr_apt_20261020_demo@example.test",
+          "country": "CL",
+          "plan": "free",
+          "state": "suspended",
+          "lastActivity": "2026-10-20T18:27:36.022Z",
+          "badges": 0,
+          "createdAt": "2026-10-20T18:27:36.022Z"
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_8c3c831f-a6a",
+          "timestamp": "2026-10-20T18:27:37.982Z"
+        }
+      }
+    },
+    {
+      "action": "persisted user state",
+      "id": "usr_apt_20261020_demo",
+      "state": "suspended"
+    },
+    {
+      "path": "/users/usr_apt_20261020_demo",
+      "method": "PATCH",
+      "status": 200,
+      "request": {
+        "state": "active",
+        "reason": "Acción rápida desde consola"
+      },
+      "response": {
+        "data": {
+          "id": "usr_apt_20261020_demo",
+          "name": "Alumno demostración APT",
+          "email": "usr_apt_20261020_demo@example.test",
+          "country": "CL",
+          "plan": "free",
+          "state": "active",
+          "lastActivity": "2026-10-20T18:27:36.022Z",
+          "badges": 0,
+          "createdAt": "2026-10-20T18:27:36.022Z"
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_92c288ee-5db",
+          "timestamp": "2026-10-20T18:27:38.186Z"
+        }
+      }
+    },
+    {
+      "path": "/tickets/tkt_apt_20261020_demo",
+      "method": "PATCH",
+      "status": 200,
+      "request": {
+        "state": "progress",
+        "reply": "Respuesta de prueba guardada desde el panel APT."
+      },
+      "response": {
+        "data": {
+          "id": "tkt_apt_20261020_demo",
+          "subject": "Consulta de demostración APT",
+          "userId": "usr_apt_20261020_demo",
+          "priority": "low",
+          "state": "progress",
+          "assigneeId": null,
+          "createdAt": "2026-10-20T18:27:36.022Z",
+          "updatedAt": "2026-10-20T18:27:38.591Z",
+          "lastReply": "Respuesta de prueba guardada desde el panel APT.",
+          "user": "Alumno demostración APT",
+          "age": "0 min"
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_86ff4f8e-4f6",
+          "timestamp": "2026-10-20T18:27:38.597Z"
+        }
+      }
+    },
+    {
+      "path": "/corrections/cor_apt_20261020_demo",
+      "method": "PATCH",
+      "status": 200,
+      "request": {
+        "resolution": "confirmed"
+      },
+      "response": {
+        "data": {
+          "id": "cor_apt_20261020_demo",
+          "state": "confirmed",
+          "rewardGranted": {
+            "userId": "usr_apt_20261020_demo",
+            "tier": "bronze",
+            "amount": 250
+          }
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_a03569d0-20d",
+          "timestamp": "2026-10-20T18:27:39.234Z"
+        }
+      }
+    },
+    {
+      "action": "correction persistence and reward",
+      "id": "cor_apt_20261020_demo",
+      "state": "confirmed",
+      "bronze": 250
+    },
+    {
+      "path": "/sponsors",
+      "method": "POST",
+      "status": 201,
+      "request": {
+        "name": "Sponsor demostración apt_20261020_demo",
+        "tier": "Bronze",
+        "monthlyFee": 0,
+        "benefits": []
+      },
+      "response": {
+        "data": {
+          "id": "SIXrOculMav7dCpQF1h6",
+          "name": "Sponsor demostración apt_20261020_demo",
+          "tier": "Bronze",
+          "monthlyFee": 0,
+          "benefitsOffered": 0,
+          "benefitsRedeemed": 0,
+          "status": "ok",
+          "benefits": []
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_3226de50-a05",
+          "timestamp": "2026-10-20T18:27:39.852Z"
+        }
+      }
+    },
+    {
+      "path": "/sponsors/SIXrOculMav7dCpQF1h6",
+      "method": "PATCH",
+      "status": 200,
+      "request": {
+        "name": "Sponsor demostración apt_20261020_demo",
+        "tier": "Silver",
+        "monthlyFee": 0,
+        "status": "ok",
+        "benefitsOffered": 0
+      },
+      "response": {
+        "data": {
+          "name": "Sponsor demostración apt_20261020_demo",
+          "tier": "Silver",
+          "monthlyFee": 0,
+          "benefitsOffered": 0,
+          "benefitsRedeemed": 0,
+          "status": "ok",
+          "benefits": [],
+          "id": "SIXrOculMav7dCpQF1h6"
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_718821fa-4a8",
+          "timestamp": "2026-10-20T18:27:40.278Z"
+        }
+      }
+    },
+    {
+      "path": "/sponsors/SIXrOculMav7dCpQF1h6",
+      "method": "DELETE",
+      "status": 204,
+      "response": null
+    },
+    {
+      "path": "/questions/import",
+      "method": "POST",
+      "status": 201,
+      "request": {
+        "testId": "m1",
+        "items": [
+          {
+            "pregunta": "Pregunta importada de demostración apt_20261020_demo",
+            "alternativas": [
+              "2",
+              "4"
+            ],
+            "respuesta_correcta": "B",
+            "explicacion_respuesta": "Dos más dos es cuatro.",
+            "habilidad_requerida": "Sumar",
+            "eje": "Números",
+            "dificultad": "d1"
+          }
+        ]
+      },
+      "response": {
+        "data": {
+          "imported": 1,
+          "skipped": 0,
+          "errors": [],
+          "duplicates": []
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_9815ecc1-34d",
+          "timestamp": "2026-10-20T18:27:41.374Z"
+        }
+      }
+    },
+    {
+      "path": "/api/v1/admin/questions/9F4d2ld19tqn2EFOKZHZ",
+      "method": "PUT",
+      "status": 200,
+      "response": {
+        "data": {
+          "testId": "m1",
+          "axis": "Números",
+          "difficulty": "d1",
+          "statement": "Pregunta importada y editada apt_20261020_demo: ¿cuánto es 2 + 2?",
+          "options": [
+            "2",
+            "4"
+          ],
+          "correctAnswer": "B",
+          "explanation": "Dos más dos es cuatro.",
+          "requiredSkill": "Sumar",
+          "status": "draft",
+          "id": "9F4d2ld19tqn2EFOKZHZ"
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_c85fa3b9-915",
+          "timestamp": "2026-10-20T18:27:41.940Z"
+        }
+      }
+    },
+    {
+      "action": "persisted in-app notification",
+      "userId": "usr_apt_20261020_demo",
+      "correctionId": "cor_apt_20261020_demo",
+      "document": {
+        "name": "projects/demo-aprueba-equipo/databases/(default)/documents/users/usr_apt_20261020_demo/notifications/cor_apt_20261020_demo",
+        "fields": {
+          "type": {
+            "stringValue": "correction_resolved"
+          },
+          "correctionId": {
+            "stringValue": "cor_apt_20261020_demo"
+          },
+          "state": {
+            "stringValue": "confirmed"
+          },
+          "message": {
+            "stringValue": "Tu recorrección fue confirmada. Recibiste 250 medallas de bronce."
+          },
+          "createdAt": {
+            "stringValue": "2026-10-20T18:27:39.223Z"
+          },
+          "read": {
+            "booleanValue": false
+          }
+        },
+        "createTime": "2026-10-20T18:27:39.232848Z",
+        "updateTime": "2026-10-20T18:27:39.232848Z"
+      }
+    }
+  ],
+  "pageErrors": [],
+  "warnings": [
+    "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.",
+    "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.",
+    "Warning: Each child in a list should have a unique \"key\" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s \n\nCheck the render method of `Overview`.  \n    at div\n    at Overview (http://localhost:5173/src/pages/Overview.jsx:22:36)\n    at Guard (http://localhost:5173/src/App.jsx:89:18)\n    at RenderedRoute (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4110:5)\n    at Routes (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4580:5)\n    at main\n    at div\n    at div\n    at Layout (http://localhost:5173/src/components/Layout.jsx:54:34)\n    at App (http://localhost:5173/src/App.jsx:44:20)\n    at AuthProvider (http://localhost:5173/src/auth/AuthContext.jsx:22:32)\n    at Router (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4523:15)\n    at BrowserRouter (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:5261:5)"
+  ],
+  "fixtures": {
+    "uid": "usr_apt_20261020_demo",
+    "tid": "tkt_apt_20261020_demo",
+    "cid": "cor_apt_20261020_demo"
+  },
+  "finishedAt": "2026-10-20T18:27:42.995Z",
+  "identity": {
+    "title": "Aprueba · Consola de administración",
+    "meaningfulContent": true,
+    "noViteOverlay": true
+  }
+}

@@ -1,0 +1,59 @@
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E02/E03 matriz de permisos exacta
+ok 1 - E02/E03 matriz de permisos exacta
+  ---
+  duration_ms: 865.983974
+  type: 'test'
+  ...
+# Subtest: E02/E03 recalculan registros, coinciden entre paneles y descartan seed
+ok 2 - E02/E03 recalculan registros, coinciden entre paneles y descartan seed
+  ---
+  duration_ms: 110.985603
+  type: 'test'
+  ...
+# Subtest: E02/E03 filtros válidos y malformados
+ok 3 - E02/E03 filtros válidos y malformados
+  ---
+  duration_ms: 180.609742
+  type: 'test'
+  ...
+# Subtest: E03 frecuencia configurable renueva cambios reales y no cuenta una suscripción vencida
+ok 4 - E03 frecuencia configurable renueva cambios reales y no cuenta una suscripción vencida
+  ---
+  duration_ms: 1559.743543
+  type: 'test'
+  ...
+# Subtest: E03 movimientos de medallas y observaciones reales se agregan sin usar balances
+ok 5 - E03 movimientos de medallas y observaciones reales se agregan sin usar balances
+  ---
+  duration_ms: 160.457589
+  type: 'test'
+  ...
+# Subtest: E03 planificador renueva instantáneas sin una consulta HTTP
+ok 6 - E03 planificador renueva instantáneas sin una consulta HTTP
+  ---
+  duration_ms: 1719.271863
+  type: 'test'
+  ...
+# Subtest: E03 configuración inválida falla explícitamente
+ok 7 - E03 configuración inválida falla explícitamente
+  ---
+  duration_ms: 93.408891
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 10689.562688
+
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-28cf27c6cf1b Creating 
+ Container aprueba-equipo-test-run-28cf27c6cf1b Created 

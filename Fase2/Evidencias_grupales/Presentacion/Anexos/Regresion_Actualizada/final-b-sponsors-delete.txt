@@ -1,0 +1,77 @@
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E07: admin recibe 204, retira sponsor y beneficios y conserva historia y referencias
+ok 1 - E07: admin recibe 204, retira sponsor y beneficios y conserva historia y referencias
+  ---
+  duration_ms: 1081.204046
+  type: 'test'
+  ...
+# Subtest: E07: baja sin beneficios devuelve 204 y repetirla devuelve 404 sin alterar la baja
+ok 2 - E07: baja sin beneficios devuelve 204 y repetirla devuelve 404 sin alterar la baja
+  ---
+  duration_ms: 147.392858
+  type: 'test'
+  ...
+# Subtest: E07: dos bajas simultáneas producen un 204 y un 404
+ok 3 - E07: dos bajas simultáneas producen un 204 y un 404
+  ---
+  duration_ms: 3587.033851
+  type: 'test'
+  ...
+# Subtest: E07: PATCH no reactiva ni modifica un sponsor dado de baja
+ok 4 - E07: PATCH no reactiva ni modifica un sponsor dado de baja
+  ---
+  duration_ms: 152.249408
+  type: 'test'
+  ...
+# Subtest: E07: finance recibe 403 y conserva sponsor y beneficios
+ok 5 - E07: finance recibe 403 y conserva sponsor y beneficios
+  ---
+  duration_ms: 114.010047
+  type: 'test'
+  ...
+# Subtest: E07: support recibe 403 y conserva sponsor y beneficios
+ok 6 - E07: support recibe 403 y conserva sponsor y beneficios
+  ---
+  duration_ms: 104.250547
+  type: 'test'
+  ...
+# Subtest: E07: ops recibe 403 y conserva sponsor y beneficios
+ok 7 - E07: ops recibe 403 y conserva sponsor y beneficios
+  ---
+  duration_ms: 104.33295
+  type: 'test'
+  ...
+# Subtest: E07: student recibe 403 y sin token recibe 401 sin alterar datos
+ok 8 - E07: student recibe 403 y sin token recibe 401 sin alterar datos
+  ---
+  duration_ms: 24.434654
+  type: 'test'
+  ...
+# Subtest: E07: inexistente devuelve 404 e identificadores inválidos 400 sin modificar datos
+ok 9 - E07: inexistente devuelve 404 e identificadores inválidos 400 sin modificar datos
+  ---
+  duration_ms: 140.340197
+  type: 'test'
+  ...
+# Subtest: E07: retira también beneficios de texto de la interfaz heredada
+ok 10 - E07: retira también beneficios de texto de la interfaz heredada
+  ---
+  duration_ms: 113.444617
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9481.244461
+
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-2ef905ce1838 Creating 
+ Container aprueba-equipo-test-run-2ef905ce1838 Created 

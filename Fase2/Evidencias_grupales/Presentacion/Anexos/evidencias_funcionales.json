@@ -1,0 +1,250 @@
+{
+  "capturedAt": "2026-10-20T17:07:48.889Z",
+  "version": "aef22bfaf2eb82b8cd708ec48eb659840b3fb32b",
+  "environment": {
+    "app": "http://localhost:5173",
+    "api": "http://localhost:4000",
+    "firestore": "demo-aprueba-equipo",
+    "viewport": "1440x1000",
+    "browser": "Chrome / Playwright",
+    "routing": "Browser plugin not available"
+  },
+  "cases": [
+    {
+      "id": "A",
+      "endpoint": "POST /admin/containers/aprueba-ops-lab/restart",
+      "httpStatus": 202,
+      "response": {
+        "data": {
+          "name": "aprueba-ops-lab",
+          "action": "restart",
+          "status": "scheduled",
+          "operationId": "q8BQlcD5U9qaUt7ZU1L3"
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_081ecc33-9b6",
+          "timestamp": "2026-10-20T17:07:53.517Z"
+        }
+      },
+      "before": {
+        "startedAt": "2026-10-20T17:07:02.147118704Z",
+        "status": "running"
+      },
+      "after": {
+        "startedAt": "2026-10-20T17:07:53.360153627Z",
+        "status": "running",
+        "health": "healthy"
+      },
+      "assertion": "StartedAt changed and container healthy; 202 alone is not completion"
+    },
+    {
+      "id": "B",
+      "endpoint": "POST /admin/questions",
+      "httpStatus": 201,
+      "request": {
+        "testId": "m1",
+        "axis": "Números",
+        "difficulty": "d1",
+        "statement": "Evidencia APT 20261020-068889: ¿cuánto es 2 + 2?",
+        "options": [
+          "4",
+          "3",
+          "5",
+          "6",
+          "7"
+        ],
+        "correctAnswer": "A",
+        "explanation": "Sumamos dos unidades y otras dos unidades. El resultado es cuatro.",
+        "requiredSkill": "Resolver sumas de números naturales"
+      },
+      "response": {
+        "data": {
+          "id": "9R0awGU7wyJEjIt7pVqv",
+          "status": "draft"
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_4651a966-af2",
+          "timestamp": "2026-10-20T17:07:59.791Z"
+        }
+      },
+      "persistedDocument": {
+        "name": "projects/demo-aprueba-equipo/databases/(default)/documents/questions/9R0awGU7wyJEjIt7pVqv",
+        "fields": {
+          "testId": {
+            "stringValue": "m1"
+          },
+          "axis": {
+            "stringValue": "Números"
+          },
+          "difficulty": {
+            "stringValue": "d1"
+          },
+          "statement": {
+            "stringValue": "Evidencia APT 20261020-068889: ¿cuánto es 2 + 2?"
+          },
+          "options": {
+            "arrayValue": {
+              "values": [
+                {
+                  "stringValue": "4"
+                },
+                {
+                  "stringValue": "3"
+                },
+                {
+                  "stringValue": "5"
+                },
+                {
+                  "stringValue": "6"
+                },
+                {
+                  "stringValue": "7"
+                }
+              ]
+            }
+          },
+          "correctAnswer": {
+            "stringValue": "A"
+          },
+          "explanation": {
+            "stringValue": "Sumamos dos unidades y otras dos unidades. El resultado es cuatro."
+          },
+          "requiredSkill": {
+            "stringValue": "Resolver sumas de números naturales"
+          },
+          "status": {
+            "stringValue": "draft"
+          }
+        },
+        "createTime": "2026-10-20T17:07:59.787456Z",
+        "updateTime": "2026-10-20T17:07:59.787456Z"
+      },
+      "assertion": "UI creates question; direct emulator read confirms identical ID, statement and draft status"
+    },
+    {
+      "id": "C",
+      "endpoint": "POST /admin/plans",
+      "httpStatus": 201,
+      "request": {
+        "name": "Plan evidencia APT 20261020-068889",
+        "price": 0,
+        "color": "#6366F1",
+        "features": [],
+        "limits": {
+          "qDay": 0,
+          "groups": 0,
+          "tests": 1
+        },
+        "badges": {
+          "login": 1,
+          "purchase": 0,
+          "correct": 1
+        }
+      },
+      "response": {
+        "data": {
+          "name": "Plan evidencia APT 20261020-068889",
+          "price": 0,
+          "color": "#6366F1",
+          "features": [],
+          "limits": {
+            "qDay": 0,
+            "groups": 0,
+            "tests": 1
+          },
+          "badges": {
+            "login": 1,
+            "purchase": 0,
+            "correct": 1
+          },
+          "id": "S2Hmpnzx7Q30OeLs8maj",
+          "createdAt": "2026-10-20T17:08:00.188Z",
+          "updatedAt": "2026-10-20T17:08:00.188Z"
+        },
+        "error": null,
+        "meta": {
+          "requestId": "req_2f211b89-2e3",
+          "timestamp": "2026-10-20T17:08:00.192Z"
+        }
+      },
+      "persistedDocument": {
+        "name": "projects/demo-aprueba-equipo/databases/(default)/documents/plans/S2Hmpnzx7Q30OeLs8maj",
+        "fields": {
+          "name": {
+            "stringValue": "Plan evidencia APT 20261020-068889"
+          },
+          "price": {
+            "integerValue": "0"
+          },
+          "color": {
+            "stringValue": "#6366F1"
+          },
+          "features": {
+            "arrayValue": {}
+          },
+          "limits": {
+            "mapValue": {
+              "fields": {
+                "qDay": {
+                  "integerValue": "0"
+                },
+                "groups": {
+                  "integerValue": "0"
+                },
+                "tests": {
+                  "integerValue": "1"
+                }
+              }
+            }
+          },
+          "badges": {
+            "mapValue": {
+              "fields": {
+                "login": {
+                  "integerValue": "1"
+                },
+                "purchase": {
+                  "integerValue": "0"
+                },
+                "correct": {
+                  "integerValue": "1"
+                }
+              }
+            }
+          },
+          "createdAt": {
+            "stringValue": "2026-10-20T17:08:00.188Z"
+          },
+          "updatedAt": {
+            "stringValue": "2026-10-20T17:08:00.188Z"
+          },
+          "revision": {
+            "integerValue": "0"
+          }
+        },
+        "createTime": "2026-10-20T17:08:00.192Z",
+        "updateTime": "2026-10-20T17:08:00.192Z"
+      },
+      "assertion": "UI creates free plan; emulator read confirms same ID, name and price 0; no Stripe call required"
+    }
+  ],
+  "pageErrors": [],
+  "consoleWarnings": [
+    "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.",
+    "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.",
+    "Warning: Each child in a list should have a unique \"key\" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s \n\nCheck the render method of `Overview`.  \n    at div\n    at Overview (http://localhost:5173/src/pages/Overview.jsx:22:36)\n    at Guard (http://localhost:5173/src/App.jsx:89:18)\n    at RenderedRoute (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4110:5)\n    at Routes (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4580:5)\n    at main\n    at div\n    at div\n    at Layout (http://localhost:5173/src/components/Layout.jsx:54:34)\n    at App (http://localhost:5173/src/App.jsx:44:20)\n    at AuthProvider (http://localhost:5173/src/auth/AuthContext.jsx:22:32)\n    at Router (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4523:15)\n    at BrowserRouter (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:5261:5)",
+    "Warning: Each child in a list should have a unique \"key\" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s \n\nCheck the render method of `Operations`.  \n    at tr\n    at Operations (http://localhost:5173/src/pages/Operations.jsx:21:38)\n    at Guard (http://localhost:5173/src/App.jsx:89:18)\n    at RenderedRoute (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4110:5)\n    at Routes (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4580:5)\n    at main\n    at div\n    at div\n    at Layout (http://localhost:5173/src/components/Layout.jsx:54:34)\n    at App (http://localhost:5173/src/App.jsx:44:20)\n    at AuthProvider (http://localhost:5173/src/auth/AuthContext.jsx:22:32)\n    at Router (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4523:15)\n    at BrowserRouter (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:5261:5)",
+    "⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.",
+    "⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.",
+    "Warning: Each child in a list should have a unique \"key\" prop.%s%s See https://reactjs.org/link/warning-keys for more information.%s \n\nCheck the render method of `Operations`.  \n    at tr\n    at Operations (http://localhost:5173/src/pages/Operations.jsx:21:38)\n    at Guard (http://localhost:5173/src/App.jsx:89:18)\n    at RenderedRoute (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4110:5)\n    at Routes (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4580:5)\n    at main\n    at div\n    at div\n    at Layout (http://localhost:5173/src/components/Layout.jsx:54:34)\n    at App (http://localhost:5173/src/App.jsx:44:20)\n    at AuthProvider (http://localhost:5173/src/auth/AuthContext.jsx:22:32)\n    at Router (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:4523:15)\n    at BrowserRouter (http://localhost:5173/node_modules/.vite/deps/react-router-dom.js?v=dfa5c438:5261:5)"
+  ],
+  "pageIdentity": {
+    "url": "http://localhost:5173/planes",
+    "title": "Aprueba · Consola de administración",
+    "meaningfulContent": true,
+    "noViteOverlay": true
+  },
+  "completedAt": "2026-10-20T17:08:01.518Z"
+}

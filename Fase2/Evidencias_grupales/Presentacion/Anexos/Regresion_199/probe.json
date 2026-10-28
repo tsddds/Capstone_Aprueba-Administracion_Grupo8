@@ -1,0 +1,59 @@
+{
+  "at": "2026-10-20T16:06:27.620Z",
+  "isolated": true,
+  "note": {
+    "stateBefore": "pending",
+    "expected": "200 y persistencia de nota interna según contrato",
+    "observed": {
+      "status": 400,
+      "body": {
+        "data": null,
+        "error": {
+          "code": "VALIDATION_ERROR",
+          "message": "Campo no permitido",
+          "details": [
+            {
+              "field": "note",
+              "message": "Campo no permitido"
+            }
+          ],
+          "field": "note"
+        },
+        "meta": {
+          "requestId": "req_573d0b93-cb9",
+          "timestamp": "2026-10-20T16:06:27.430Z"
+        }
+      }
+    },
+    "unchanged": true
+  },
+  "serviceKeys": [
+    {
+      "id": null,
+      "key": "lab",
+      "state": "ok"
+    }
+  ],
+  "metrics": {
+    "mau": {
+      "value": 4,
+      "deltaPct": null
+    },
+    "converted": {
+      "value": 2,
+      "rate": 50
+    },
+    "mrr": {
+      "value": 8000,
+      "deltaPct": null
+    },
+    "generatedAt": "2026-10-20T16:06:27.532Z",
+    "source": "calculated_from_records"
+  },
+  "planIds": [
+    "all",
+    "free",
+    "pl_demo_empty",
+    "uni"
+  ]
+}

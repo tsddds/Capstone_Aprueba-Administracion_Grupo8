@@ -1,0 +1,73 @@
+TAP version 13
+# [firebase] Conectado al emulador de Firestore en firestore-test:8080
+# Subtest: E14 validates patches and missing IDs without mutation
+ok 1 - E14 validates patches and missing IDs without mutation
+  ---
+  duration_ms: 508.672589
+  type: 'test'
+  ...
+# Subtest: E14 normalized email uniqueness also handles concurrent requests
+not ok 2 - E14 normalized email uniqueness also handles concurrent requests
+  ---
+  duration_ms: 20383.920529
+  type: 'test'
+  location: '/app/test/integration/a-sprint2.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: ''
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    node:internal/deps/undici/undici:15270:13
+    process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    async request (file:///app/test/integration/helper.mjs:7:20)
+    async Promise.all (index 1)
+    async TestContext.<anonymous> (file:///app/test/integration/a-sprint2.test.mjs:19:20)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: E14 persists changes and append-only audits without changing medals or subscriptions
+ok 3 - E14 persists changes and append-only audits without changing medals or subscriptions
+  ---
+  duration_ms: 146.351014
+  type: 'test'
+  ...
+# Subtest: E15 filters, computes age, enriches user and paginates
+ok 4 - E15 filters, computes age, enriches user and paginates
+  ---
+  duration_ms: 139.744461
+  type: 'test'
+  ...
+# Subtest: E16 validates states, priority, assignee and reply; missing ticket is 404
+ok 5 - E16 validates states, priority, assignee and reply; missing ticket is 404
+  ---
+  duration_ms: 173.454861
+  type: 'test'
+  ...
+# Subtest: E16 retains concurrent replies and audits rather than overwriting history
+ok 6 - E16 retains concurrent replies and audits rather than overwriting history
+  ---
+  duration_ms: 3564.785926
+  type: 'test'
+  ...
+# Subtest: E14–E16 deny finance and ops, accept admin/support
+ok 7 - E14–E16 deny finance and ops, accept admin/support
+  ---
+  duration_ms: 182.05592
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 6
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 25267.530066
+
+ Container aprueba-equipo-firestore-test-1 Running 
+ Container aprueba-equipo-firestore-test-1 Waiting 
+ Container aprueba-equipo-firestore-test-1 Healthy 
+ Container aprueba-equipo-test-run-1e6a80435939 Creating 
+ Container aprueba-equipo-test-run-1e6a80435939 Created 
+[error] Error
+
