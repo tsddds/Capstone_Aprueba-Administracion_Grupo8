@@ -16,6 +16,8 @@ El [contexto del proyecto](Fase2/Aplicacion/docs/22_CONTEXTO_Y_ALCANCE.md) reún
 - [Product Vision](Fase1/Evidencias_grupales/anexo/01_Inicio/03_Product_Vision_Criterios_Exito.docx): actualización al alcance de 27 endpoints y cinco sprints, con fecha de revisión documental del 28/10.
 - [Fase 2](Fase2/README.md): guía 2.4, informe 2.6 preparado, seis planillas, aplicación, pruebas, presentación y pendientes.
 
+Revisa las evidencias por tema en el [anexo de Fase 1](Fase1/Evidencias_grupales/anexo) y el [anexo de Fase 2](Fase2/Evidencias_grupales/anexo).
+
 ## Herramientas utilizadas
 
 JavaScript, Node.js, Express, Firebase Admin SDK y Cloud Firestore para el backend; React y Vite para la demostración; Docker Compose y emuladores Firebase para desarrollo y pruebas; pruebas automatizadas con `node:test`; Git y GitHub para integración y documentación. Vercel aloja el despliegue previamente preparado; esta publicación académica no lo actualiza. Stripe se utiliza como integración de precios en modo de pruebas, con aceptación externa pendiente.
