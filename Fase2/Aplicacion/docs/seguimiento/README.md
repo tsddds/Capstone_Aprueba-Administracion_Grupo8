@@ -9,6 +9,6 @@ Las seis planillas reúnen el trabajo integrado de Tsung-Hao, Catalina y Felipe.
 5. **05_Inventario_Tecnico_y_Verificacion_Fase2.xlsx**: insumos, implementación y brechas técnicas.
 6. **06_Casos_Prueba_y_Defectos_Fase2.xlsx**: casos, defectos y cobertura de requisitos.
 
-La planilla grupal sustituye el seguimiento individual del bloque A. Las celdas amarillas permiten registrar revisión de pares. Las fórmulas distinguen revisión pendiente de aceptación externa pendiente, y la rúbrica conserva los pesos de evaluación sin asignar una nota.
+La planilla grupal sustituye el seguimiento individual del bloque A. Las celdas amarillas permiten registrar revisión de pares. Las fórmulas y la rúbrica corresponden al corte registrado. El alcance vigente de las pruebas de precios es la simulación. Consulta los pendientes actuales en el [control de Fase 2](../00_CONTROL_FASE2.md).
 
 Los registros originales de las ejecuciones se conservan en `../evidencias`; el resumen vigente reúne 214 aprobaciones y compilación correcta. La [guía de cierre](../18_CIERRE_FASE2_Y_ENTREGA.md) describe las validaciones externas y la entrega. Las fechas de la carta Gantt se ajustan mediante acuerdos reales del equipo.

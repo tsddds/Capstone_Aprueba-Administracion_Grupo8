@@ -1,6 +1,6 @@
 # Cierre técnico y entrega de Fase 2
 
-Corte: 27 de octubre de 2026. Entrega solicitada: informe final de Fase 2, según guía académica 2.6. El candidato local está preparado y probado; faltan las acciones externas y personales que se detallan aquí. No se publicó un nuevo commit ni se desplegó esta revisión.
+Estado documental al 4 de noviembre de 2026. El informe final sigue la guía académica 2.6. La evidencia técnica corresponde al 27 de octubre de 2026.
 
 ## 1. Resultado disponible
 
@@ -40,68 +40,11 @@ node backend/dev/verify-phase2.mjs --output .local/verificacion-equipo
 
 El runner exige no sobrescribir evidencias y detiene la ejecución ante el primer fallo. No ejecutar suites de integración en paralelo contra `demo-aprueba-tests`. Las pruebas se restablecen en ese proyecto descartable, separado de `demo-aprueba-equipo`.
 
-## 3. Crear acceso de pruebas de Stripe
+## 3. Pruebas de sincronización de precios
 
-1. Entrar al [registro oficial de Stripe](https://dashboard.stripe.com/register), crear la cuenta con datos propios correctos y verificar el correo. Si la empresa proporciona acceso, aceptar una invitación al sandbox en lugar de compartir contraseñas.
-2. Seleccionar un **sandbox o entorno de pruebas** en el selector del Dashboard. No es necesario activar cobros reales para empezar a probar. No ingresar tarjetas reales para esta comprobación: este proyecto valida sincronización de catálogo, no cobros.
-3. El registro requiere datos correctos del titular y su entidad. Si la cuenta no permite acceder a un sandbox, solicitar uno autorizado a la empresa o al docente. Chile no figura en la lista comercial de países soportados consultada. Max también autorizó Flow de pruebas; esa alternativa requiere implementar y validar su adaptador.
-4. En las claves API del sandbox, obtener la **clave privada de pruebas**. El adaptador actual exige prefijo `sk_test_`; `pk_test_` no sirve y `rk_test_` no está admitida por esta implementación. No guardar la clave en el frontend, Git, capturas, Excel o chat.
-5. La cuenta queda a cargo de su titular. Compartir con compañeros mediante invitaciones y permisos, nunca entregando la contraseña de la cuenta personal.
+La entrega académica usa el proveedor simulado. La suite `c-billing` comprueba cambios de precio, fallos y reintentos. Los registros están en [la evidencia del 27 de octubre](evidencias/cierre-2026-10-27/c-billing.txt).
 
-Fuentes: [cuentas y sandbox](https://docs.stripe.com/get-started/account), [claves](https://docs.stripe.com/keys), [entornos de pruebas](https://docs.stripe.com/testing), [disponibilidad comercial](https://stripe.com/global). Consulta 27/10/2026.
-
-## 4. Conectar la clave solo al backend local
-
-Crear `.local/compose.stripe-test.yaml` dentro del repositorio. `.local/` ya está ignorada por Git. Contenido **sin la clave**:
-
-```yaml
-services:
-  backend:
-    environment:
-      STRIPE_TEST_SECRET_KEY: ${STRIPE_TEST_SECRET_KEY:?Falta clave privada de pruebas}
-```
-
-En PowerShell, leerla sin escribirla como texto literal en el historial:
-
-```powershell
-$stripeSecretInput = Read-Host 'Clave privada del sandbox Stripe' -AsSecureString
-$stripeSecretPtr = [Runtime.InteropServices.Marshal]::SecureStringToBSTR($stripeSecretInput)
-try {
-  $env:STRIPE_TEST_SECRET_KEY = [Runtime.InteropServices.Marshal]::PtrToStringBSTR($stripeSecretPtr)
-  if ($env:STRIPE_TEST_SECRET_KEY -notmatch '^sk_test_[A-Za-z0-9_]+$') {
-    throw 'Se requiere una clave privada de pruebas sk_test_'
-  }
-  docker compose -f compose.yaml -f compose.ops.yaml -f .local/compose.stripe-test.yaml up -d --no-deps --force-recreate backend
-  if ($LASTEXITCODE -ne 0) { throw 'No se pudo recrear el backend' }
-} finally {
-  [Runtime.InteropServices.Marshal]::ZeroFreeBSTR($stripeSecretPtr)
-  Remove-Item Env:STRIPE_TEST_SECRET_KEY -ErrorAction SilentlyContinue
-  $stripeSecretInput = $null
-}
-```
-
-La clave permanece en el contenedor local hasta recrearlo sin el override. No ejecutar ni compartir `docker compose config` o `docker inspect` con esa configuración porque pueden mostrarla. La semilla y los tests siguen sin recibirla. No crear `backend/.env`: el arranque aislado lo rechaza por diseño.
-
-## 5. Aceptar la sincronización de precios
-
-Realizar esta comprobación con Felipe, responsable del módulo de planes:
-
-1. Iniciar sesión en la aplicación local como administrador. Crear un plan de prueba nuevo, sin suscriptores, con precio 1000 CLP y nombre identificable. No reutilizar un plan con una operación pendiente antigua.
-2. Guardar su ID y observar el documento en el visor Firestore. Crear el plan no demuestra todavía una sincronización de precio.
-3. Editar únicamente el precio a 1250 CLP y guardar. El cliente envía `PUT /api/v1/admin/plans/{id}`. Debe devolver 200; el precio local solo debe cambiar tras confirmar Stripe.
-4. En el sandbox Stripe, abrir el producto correspondiente y verificar un precio mensual CLP de 1250. El adaptador crea un nuevo Price, no cambia retroactivamente el importe de un Price existente ni migra suscripciones.
-5. En Firestore revisar `plans/{id}.billing`: `mode=test`, `productId` y `priceId`. Revisar `planPriceOperations/{id}` con `status=completed` y el registro `adminAudit` de `update-price`.
-6. Repetir la misma solicitud sin cambiar los datos. Debe conservar precio e identificadores y no crear otra operación de precio innecesaria. Si hay 503, no borrar `planPriceOperations`: corregir configuración/conectividad y reintentar el mismo cambio. Si la operación supera la ventana de conciliación (23 horas en esta implementación), revisar Stripe antes de reintentar; no forzar el estado a mano.
-7. Guardar fecha, ID ficticio, estado HTTP y capturas del producto/Price y Firestore sin claves ni cabeceras Authorization. Registrar el resultado en la misma planilla 06, caso API-026, y actualizar el estado de Stripe en 02/04/05 y el informe. Hasta entonces sigue pendiente, aunque los mocks pasen.
-8. Al terminar, recrear el backend sin el override para retirar la clave del contenedor:
-
-```powershell
-docker compose -f compose.yaml -f compose.ops.yaml up -d --no-deps --force-recreate backend
-```
-
-No se requiere instalar Stripe CLI, un plugin ni SDK nuevo para este recorrido. [Referencia de creación de precios](https://docs.stripe.com/api/prices/create).
-
-## 6. Programar métricas en el entorno remoto
+## 4. Programar métricas en el entorno remoto
 
 Este paso requiere acceso al proyecto Vercel y autorización para desplegar. No se ejecutó en esta revisión.
 
@@ -120,7 +63,7 @@ La hora de cron es UTC y Hobby no asegura el minuto exacto. Si se requiere el in
 
 Fuentes: [configuración de cron](https://vercel.com/docs/cron-jobs), [protección y gestión](https://vercel.com/docs/cron-jobs/manage-cron-jobs). No añadir el socket Docker local ni el puente privilegiado al despliegue Vercel.
 
-## 7. Revisión del equipo y contenido académico
+## 5. Revisión del equipo y contenido académico
 
 1. Cada compañero recibe el código integrado **después de publicar la rama**, conserva sus cambios y lo ejecuta en su computador. Registrar sistema, fecha, comando, resultado y cualquier diferencia. Una ejecución en este PC no prueba los tres equipos.
 2. Catalina revisa E18, permisos, importación y comportamiento de sponsors/preguntas; Felipe revisa planes, métricas, integración y la reserva de correo con Tsung-Hao. Marcar los campos amarillos de revisión solo después de realizarla.
@@ -129,7 +72,7 @@ Fuentes: [configuración de cron](https://vercel.com/docs/cron-jobs), [protecci�
 5. Actualizar resultados externos y pendientes del informe después de ejecutarlos. Los seis Excel son el seguimiento operativo; la rúbrica académica la completa el docente.
 6. Conservar el PPT elegido como apoyo para la presentación. Tiene su fecha y no reemplaza este informe. Si se usan cifras actuales en la defensa, citar las 214 pruebas del nuevo corte y explicar los pendientes.
 
-## 8. Publicación y entrega
+## 6. Publicación y entrega
 
 No se hicieron commit, push, merge ni cambios remotos el 27/10. Para publicar, primero revisar todo el diff y los archivos nuevos, especialmente que no se incluyan `.env`, claves, exportaciones de bases reales ni la carpeta privada `.local`.
 

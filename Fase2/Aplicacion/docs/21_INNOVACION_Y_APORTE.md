@@ -20,9 +20,9 @@ Docker separa la base de trabajo de la base descartable de pruebas. El visor Fir
 
 Esta preparación facilita la reproducción técnica del proyecto. No se ha medido una reducción de costos ni se ha validado la disponibilidad de los servicios empresariales. El [laboratorio](03_DATOS_Y_CONTRATOS_INTERNOS.md#laboratorio-operativo) y las [pruebas operativas](../backend/test/integration/a-ops.test.mjs) documentan el alcance local.
 
-## Precios y aceptación externa
+## Pruebas de precios
 
-El catálogo prepara la sincronización de precios con un proveedor de pruebas y registra una operación idempotente antes de guardar el resultado. La regresión comprueba el comportamiento frente a respuestas y fallos de un proveedor simulado. Falta aceptar un cambio contra Stripe sandbox con una cuenta autorizada. Esa comprobación es parte del trabajo pendiente y no un beneficio demostrado.
+El catálogo prepara la sincronización de precios con un proveedor de pruebas y registra una operación idempotente antes de guardar el resultado. La regresión comprueba el comportamiento frente a respuestas y fallos de un proveedor simulado. La entrega académica utiliza ese mismo alcance de simulación.
 
 ## Resultado observado
 

@@ -2,7 +2,7 @@
 
 Proyecto Capstone del Grupo 8 de Ingeniería en Informática, Duoc UC, 2026. Integrantes: Tsung-Hao Liu, Catalina Padilla y Felipe Rojas.
 
-**Estado al 28 de octubre de 2026: Fase 2 en desarrollo avanzado.** El equipo integró los tres bloques y comprobó la ejecución en Docker local. El corte del 27/10 registra 214 pruebas automatizadas aprobadas, sin fallos ni omisiones, y la compilación del cliente. La aceptación externa, la revisión del equipo y los diarios individuales siguen pendientes.
+**Estado al 4 de noviembre de 2026: Fase 2 en desarrollo avanzado.** El equipo integró los tres bloques y comprobó la ejecución en Docker local. El corte del 27/10 registra 214 pruebas automatizadas aprobadas, sin fallos ni omisiones, y la compilación del cliente. El diario 2.1 de Tsung-Hao ya está publicado. Quedan los diarios de Catalina y Felipe, la validación remota y la revisión del equipo.
 
 ## Proyecto y alcance
 
@@ -20,7 +20,7 @@ Revisa las evidencias por tema en el [anexo de Fase 1](Fase1/Evidencias_grupales
 
 ## Herramientas utilizadas
 
-JavaScript, Node.js, Express, Firebase Admin SDK y Cloud Firestore para el backend; React y Vite para la demostración; Docker Compose y emuladores Firebase para desarrollo y pruebas; pruebas automatizadas con `node:test`; Git y GitHub para integración y documentación. Vercel aloja el despliegue previamente preparado; esta publicación académica no lo actualiza. Stripe se utiliza como integración de precios en modo de pruebas, con aceptación externa pendiente.
+JavaScript, Node.js, Express, Firebase Admin SDK y Cloud Firestore para el backend; React y Vite para la demostración; Docker Compose y emuladores Firebase para desarrollo y pruebas; pruebas automatizadas con `node:test`; Git y GitHub para integración y documentación. Vercel aloja el despliegue previamente preparado; esta publicación académica no lo actualiza. Las pruebas de sincronización de precios usan un proveedor simulado.
 
 ## Ejecución local
 
@@ -53,7 +53,7 @@ Para repetir la verificación conjunta, con Node.js instalado además de Docker,
 node backend/dev/verify-phase2.mjs --output .local/verificacion-equipo
 ```
 
-Usar una carpeta de salida nueva. La [guía de pruebas](Fase2/Aplicacion/docs/04_PRUEBAS_Y_ACEPTACION.md) también explica las suites por separado. Los resultados de Stripe usan un proveedor simulado; falta la comprobación en sandbox externo.
+Usar una carpeta de salida nueva. La [guía de pruebas](Fase2/Aplicacion/docs/04_PRUEBAS_Y_ACEPTACION.md) también explica las suites por separado.
 
 ## Equipo y metodología
 
@@ -73,4 +73,4 @@ El [modelo de datos Firestore](Fase2/Aplicacion/docs/19_MODELO_DATOS_FIRESTORE.m
 
 ## Próximos pasos
 
-Completar los tres diarios individuales 2.1; realizar revisión de pares y recepción en los computadores de los compañeros; aceptar Stripe sandbox; configurar y verificar la agenda remota y los servicios autorizados; revisar el informe y registrar la entrega académica. Los pasos están en [cierre y entrega](Fase2/Aplicacion/docs/18_CIERRE_FASE2_Y_ENTREGA.md). Publicar el avance no equivale a cerrar la fase ni a aprobar la evaluación.
+Completar los diarios 2.1 de Catalina y Felipe, realizar la revisión de pares y comprobar el arranque en sus computadores. También quedan la agenda remota, los servicios autorizados, la revisión del informe y la entrega académica. Los pasos están en [cierre y entrega](Fase2/Aplicacion/docs/18_CIERRE_FASE2_Y_ENTREGA.md). Publicar el avance no equivale a cerrar la fase ni a aprobar la evaluación.

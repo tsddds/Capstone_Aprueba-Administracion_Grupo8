@@ -18,7 +18,7 @@ Para el proyecto académico, el desarrollo aplica análisis de requisitos, progr
 
 Implementar los 27 endpoints administrativos de la sección 4 del contrato original, con persistencia en Firestore y las convenciones generales necesarias de autenticación, permisos, paginación, respuestas y validación. El trabajo conserva JavaScript, Node.js y Express. React/Vite aporta la interfaz de demostración.
 
-Se incluyen las funciones de acceso, métricas, patrocinadores, plataformas, supervisión, contenedores, usuarios, soporte, recorrecciones, preguntas, funcionalidades y planes. La aplicación del alumno y el generador no forman parte del alcance comprometido. Los datos de negocio son ficticios. La operación se demuestra en Docker local autorizado y los precios requieren aceptación en un proveedor de pruebas.
+Se incluyen las funciones de acceso, métricas, patrocinadores, plataformas, supervisión, contenedores, usuarios, soporte, recorrecciones, preguntas, funcionalidades y planes. La aplicación del alumno y el generador no forman parte del alcance comprometido. Los datos de negocio son ficticios. La operación se demuestra en Docker local autorizado y las pruebas de precios usan un proveedor simulado.
 
 ## Interesados y responsabilidades
 
@@ -30,6 +30,6 @@ Se incluyen las funciones de acceso, métricas, patrocinadores, plataformas, sup
 
 ## Avance y aceptación
 
-La implementación integrada dispone de evidencia local del 27 de octubre de 2026: 214 pruebas aprobadas y compilación del cliente. La publicación académica del avance no acredita aceptación del equipo, de la empresa ni del docente. Siguen pendientes Stripe externo, validación remota, revisión de pares, recepción en otros computadores y los diarios individuales.
+La implementación integrada dispone de evidencia local del 27 de octubre de 2026: 214 pruebas aprobadas y compilación del cliente. La publicación académica del avance no acredita aceptación del equipo, de la empresa ni del docente. Siguen pendientes la validación remota, la revisión de pares, la recepción en otros computadores y los diarios 2.1 de Catalina y Felipe.
 
 La visión del producto de Fase 1 presenta los resultados esperados. Los [requisitos y el seguimiento](seguimiento/README.md), el [reparto](01_REPARTO_EQUIPO.md) y la [guía de cierre](18_CIERRE_FASE2_Y_ENTREGA.md) detallan la implementación y los pendientes. Los antecedentes académicos se encuentran en la Guía 1.5 y en la Formativa 1.4 de Fase 1.

@@ -1,6 +1,6 @@
 # Fase 2 Desarrollo y seguimiento
 
-Estado al 28 de octubre de 2026: desarrollo avanzado, con integración y comprobación local. La evidencia técnica tiene corte del 27 de octubre. La fase todavía requiere revisión del equipo y aceptación externa.
+Estado al 4 de noviembre de 2026. El desarrollo está integrado y comprobado en Docker local. La evidencia técnica tiene corte del 27 de octubre. Las pruebas de sincronización de precios usan un proveedor simulado.
 
 ## Entregables y acceso
 
@@ -12,10 +12,12 @@ Estado al 28 de octubre de 2026: desarrollo avanzado, con integración y comprob
 - [Modelo de datos](Aplicacion/docs/19_MODELO_DATOS_FIRESTORE.md), [clases del dominio](Aplicacion/docs/20_DIAGRAMA_CLASES_DOMINIO.md) y [aporte del proyecto](Aplicacion/docs/21_INNOVACION_Y_APORTE.md).
 - [Contexto y alcance](Aplicacion/docs/22_CONTEXTO_Y_ALCANCE.md): problema, justificación, límites e interesados.
 - [Presentación](Evidencias_grupales/Presentacion), con capturas y anexos. Conserva el corte histórico del 20/10 y sus 199 pruebas, no el resultado posterior de 214.
-- [Diarios individuales pendientes](Evidencias_individuales/README.md).
+- [Estado de los diarios individuales](Evidencias_individuales/README.md).
 
-## Pendientes de aceptación
+Los informes, las planillas y las evidencias conservan lo registrado en su fecha. Para el alcance y los pendientes vigentes, consultar el [control de Fase 2](Aplicacion/docs/00_CONTROL_FASE2.md).
 
-Stripe sandbox con cuenta autorizada; agenda remota y servicios empresariales; revisión de pares y recepción en los otros computadores; diarios 2.1 de los tres integrantes; revisión académica y entrega en la plataforma del curso. La publicación del avance no cierra estos puntos. Los procedimientos están en [la guía de cierre](Aplicacion/docs/18_CIERRE_FASE2_Y_ENTREGA.md).
+## Pendientes de cierre
+
+Quedan los diarios 2.1 de Catalina y Felipe, la agenda remota y los servicios empresariales, la revisión de pares y la recepción en los otros computadores. También quedan la revisión académica y la entrega en la plataforma del curso. La publicación del avance no cierra estos puntos. Los procedimientos están en [la guía de cierre](Aplicacion/docs/18_CIERRE_FASE2_Y_ENTREGA.md).
 
 Los documentos de inicio y planificación siguen en Fase1. No se renombraron como entregables de Fase2. La visión del producto se actualizó el 28/10 con el alcance vigente y mantiene la revisión del equipo pendiente.

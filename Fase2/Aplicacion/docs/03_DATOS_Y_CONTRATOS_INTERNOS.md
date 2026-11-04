@@ -37,7 +37,7 @@ La importación de preguntas guarda borradores y reporta errores por fila. Admit
 
 El trigger operativo GET `/internal/metrics/refresh` permite una agenda remota, con `CRON_SECRET` independiente del JWT. La configuración y validación en Vercel se realizan según la guía de cierre.
 
-Los cambios de precio usan Stripe de pruebas y crean un nuevo Price mensual en CLP. El precio local se guarda después de confirmar el proveedor. `planPriceOperations/{planId}` registra la operación, revisión e idempotencia. Tras un fallo, reintentar el mismo cambio conserva la operación. Una operación de más de 23 horas requiere conciliación con Stripe. Esta versión no migra suscripciones al nuevo precio. La aceptación externa continúa pendiente.
+La entrega demuestra los cambios de precio con un proveedor simulado en las pruebas. El precio local se guarda después de confirmar la respuesta del proveedor. `planPriceOperations/{planId}` registra la operación, la revisión y la clave de idempotencia. Tras un fallo, reintentar el mismo cambio conserva la operación. Las pruebas también cubren el aviso de conciliación para operaciones antiguas.
 
 ## Laboratorio operativo
 

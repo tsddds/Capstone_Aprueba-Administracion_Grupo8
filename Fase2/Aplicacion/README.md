@@ -50,4 +50,4 @@ node backend/dev/verify-phase2.mjs --output .local/verificacion-equipo
 
 Usar un directorio de salida nuevo. También se pueden ejecutar las suites individualmente con Docker según la guía de pruebas.
 
-La aceptación de Stripe sandbox, la operación remota y la revisión del equipo continúan pendientes. Este paquete académico incorpora el corte integrado del 27/10/2026. Su publicación no despliega cambios en Vercel ni modifica Firebase remoto.
+Las pruebas de sincronización de precios usan un proveedor simulado. La operación remota y la revisión del equipo continúan pendientes. Este paquete académico incorpora el corte integrado del 27/10/2026. Su publicación no despliega cambios en Vercel ni modifica Firebase remoto.

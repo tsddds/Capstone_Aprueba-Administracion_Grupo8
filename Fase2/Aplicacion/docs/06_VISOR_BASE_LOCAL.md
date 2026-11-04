@@ -39,7 +39,7 @@ No pulsar Clear all data: borra los datos del emulador. Para reiniciar o detener
 4. Regresa al documento abierto en el visor. Revisa price: debe reflejar 1250 después de una escritura exitosa; si no se actualiza, vuelve a abrir el documento o recarga.
 5. Consulta de nuevo el plan desde Aprueba/API para comprobar que no era solo un cambio visual. Al terminar puedes restaurar el precio original.
 
-Comprobación efectuada en esta tarea: login HTTP 200 → PUT de precio 1000 a 1250 HTTP 200 → visor mostrando 1250 → GET mostrando 1250 → precio restaurado. Se probó mediante API y navegación por el visor; no se afirma haber probado los botones del frontend Aprueba en esta sesión. No acredita sincronización Stripe, todavía pendiente.
+Comprobación efectuada en esta tarea: login HTTP 200 → PUT de precio 1000 a 1250 HTTP 200 → visor mostrando 1250 → GET mostrando 1250 → precio restaurado. Se probó mediante API y navegación por el visor; no se afirma haber probado los botones del frontend Aprueba en esta sesión. La evidencia de sincronización de precios con proveedor simulado está en la [guía de pruebas](04_PRUEBAS_Y_ACEPTACION.md).
 
 ### Alternativa directa mediante API (PowerShell)
 

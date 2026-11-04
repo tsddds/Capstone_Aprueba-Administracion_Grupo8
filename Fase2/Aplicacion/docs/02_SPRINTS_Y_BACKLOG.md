@@ -40,7 +40,7 @@ El proyecto se organiza en cinco sprints y una etapa de entrega. El plan general
 
 Cada tarea requiere cumplir el contrato, conservar la integridad de datos, aprobar sus pruebas, mantener la documentación y recibir revisión de otro integrante. Las integraciones externas requieren comprobación en el proveedor autorizado.
 
-El corte del 27/10 registra la implementación integrada y 214 pruebas aprobadas. La aceptación de Stripe y la revisión de pares siguen pendientes. Los acuerdos de Sprint Review y retrospectiva se registran con las fechas de su realización.
+El corte del 27/10 registra la implementación integrada y 214 pruebas aprobadas. Las pruebas de precios usan un proveedor simulado. La revisión de pares sigue pendiente. Los acuerdos de Sprint Review y retrospectiva se registran con las fechas de su realización.
 
 ## Entrega
 

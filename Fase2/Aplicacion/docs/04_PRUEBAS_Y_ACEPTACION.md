@@ -44,6 +44,6 @@ Las imágenes se construyeron y los servicios arrancaron con sus comprobaciones 
 
 ## Aceptación pendiente
 
-Stripe se probó con proveedor simulado. La aceptación externa requiere comprobar el precio en un sandbox autorizado y su correspondencia con Firestore. También faltan agenda remota de métricas, URLs empresariales, recepción en otros computadores y revisión de pares.
+La sincronización de precios se probó con un proveedor simulado. Quedan pendientes la agenda remota de métricas, las URLs empresariales, la recepción en otros computadores y la revisión de pares.
 
 La matriz de casos y defectos registra los resultados técnicos; la planilla grupal registra la revisión del equipo. El [procedimiento de cierre](18_CIERRE_FASE2_Y_ENTREGA.md) contiene los pasos externos y académicos. Los registros históricos se conservan en `evidencias` con su fecha original.
