@@ -21,3 +21,5 @@ El diario 3.1 de Tsung-Hao está preparado localmente para su revisión personal
 ## Defensa de diciembre
 
 Después del 25/11 se registra la retroalimentación, se aplican las correcciones y se prepara la [defensa de título](../Defensa_final/README.md). Su fecha, duración y pauta corresponden a una convocatoria distinta.
+
+Verificación remota del 08/11/2026: [GitHub Actions](https://github.com/tsddds/Capstone_Aprueba-Administracion_Grupo8/actions/runs/42493493185) completó 214 pruebas y la compilación, sin fallos.

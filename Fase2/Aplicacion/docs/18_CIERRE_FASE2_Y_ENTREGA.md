@@ -37,7 +37,7 @@ node backend/dev/verify-phase2.mjs --output .local/verificacion-equipo
 
 Elegir otra carpeta si ese resultado ya existe. El procedimiento ejecuta las suites secuencialmente y conserva los logs cuando una falla. La evidencia del 08/11 está en [verificacion-2026-11-08](evidencias/verificacion-2026-11-08/resumen.json). Los registros y capturas del 27/10 conservan su fecha.
 
-GitHub Actions dispone de la verificación mediante Docker. La pestaña Actions muestra la ejecución y permite descargar sus resultados. La configuración del flujo y una ejecución local aprobada se registran por separado de la ejecución remota.
+GitHub Actions completó la verificación del 08/11 con 214 pruebas aprobadas y compilación correcta. La [ejecución remota](https://github.com/tsddds/Capstone_Aprueba-Administracion_Grupo8/actions/runs/42493493185) permite consultar los pasos y descargar los resultados. El [registro](evidencias/verificacion-2026-11-08/ejecucion-github.json) identifica el commit y las fuentes comprobadas.
 
 ## Revisar los precios
 
@@ -61,7 +61,7 @@ Referencias de configuración: [frecuencias de cron en Vercel](https://vercel.co
 1. Cada integrante ejecuta el proyecto en su computador y anota fecha, sistema, comandos y resultado en el seguimiento existente.
 2. Revisar los módulos entre compañeros. Catalina revisa usuarios y soporte de Tsung-Hao; Felipe revisa patrocinadores, preguntas y recorrecciones de Catalina; Tsung-Hao revisa planes y métricas de Felipe. El responsable de cada módulo participa en la revisión de los hallazgos.
 3. En `01_Seguimiento_Grupal_Fase2.xlsx`, registrar la revisión en la columna G. Las pruebas aprobadas mantienen el estado «Revisión pendiente» hasta que el equipo la realice.
-4. Reunir los diarios 2.1 de Catalina y Felipe. Revisar las reflexiones y competencias oficiales del informe 2.6. El abstract grupal está incorporado en español e inglés.
+4. Reunir los diarios 2.1 de Catalina y Felipe. Revisar las conclusiones y reflexiones del informe 2.6. Las competencias están vinculadas al perfil de egreso recibido. El abstract grupal está incorporado en español e inglés.
 5. Registrar los acuerdos de revisión y retrospectiva que efectivamente se realicen. Las rúbricas docentes y las calificaciones las completa quien corresponda.
 
 ## Preparación del 25 de noviembre

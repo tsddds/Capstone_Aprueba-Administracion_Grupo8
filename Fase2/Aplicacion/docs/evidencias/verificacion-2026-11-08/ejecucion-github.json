@@ -1,0 +1,32 @@
+{
+  "workflow": "Verificación del proyecto",
+  "url": "https://github.com/tsddds/Capstone_Aprueba-Administracion_Grupo8/actions/runs/42493493185",
+  "commit": "edb43449a256bfad01f66621d23b8b80d7d56b25",
+  "status": "completed",
+  "conclusion": "success",
+  "startedAt": "2026-11-08T15:10:56Z",
+  "updatedAt": "2026-11-08T15:14:20Z",
+  "artifactId": 13622197949,
+  "result": {
+    "completed": true,
+    "suites": 22,
+    "expectedSuites": 22,
+    "tests": 214,
+    "passed": 214,
+    "failed": 0,
+    "skipped": 0,
+    "billingValidation": "PROVEEDOR_SIMULADO",
+    "externalStripe": "NO_REQUERIDO",
+    "humanAcceptance": "PENDIENTE"
+  },
+  "sourceHashes": {
+    "backend/src/routes/corrections.js": "687179f54cb1e448dccfd507554c3d9c4efe12362918f9199ff7c27cafcdf575",
+    "backend/src/data/corrections.js": "1053d48cbf4ab821dd0ee0468fcd8421dcfcce3e3d8622eaff4b1f921082da31",
+    "backend/src/data/admin-support.js": "883ce040c47c94b6ba1f970f3f92bd7266c203111f709676e0faf61b9dcb6f25",
+    "backend/src/services/metrics/job.js": "157576fd3376f74abdb5547a9ffb990a798f03d9c68dab0942bfa5453a40ce59",
+    "backend/src/index.js": "0d83f85150d34ec9f4734062946604c7a4786ebb3d098961685428410a3bce2a",
+    "frontend/src/pages/Users.jsx": "955452e78bb327d34eab3883f7d82c600996df6a5c9b94dc57be33eff5005bd3",
+    "frontend/src/pages/Overview.jsx": "6a515481dbdfbba4e39fc84f0a214dc78469e88bd721aaf93ca6b2208ec23c70",
+    "frontend/src/i18n.js": "13dde27e1321084bb7cf854d97bc37f24c64e820ddd1efd6fa90f1f8ea67b677"
+  }
+}

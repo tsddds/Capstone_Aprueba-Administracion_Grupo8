@@ -25,3 +25,5 @@ Los documentos de inicio y planificación siguen en Fase1. No se renombraron com
 ## Actualización del 8 de noviembre
 
 Nueva regresión: 214 pruebas aprobadas y compilación correcta. Informe con resumen y abstract, guía 2.4 y seis planillas actualizados. La sincronización de precios se verifica con un proveedor simulado. La Gantt distingue la evaluación del 25/11 de la defensa de diciembre. Véase [el control vigente](Aplicacion/docs/00_CONTROL_FASE2.md).
+
+Verificación remota del 08/11/2026: [GitHub Actions](https://github.com/tsddds/Capstone_Aprueba-Administracion_Grupo8/actions/runs/42493493185) completó 214 pruebas y la compilación, sin fallos.

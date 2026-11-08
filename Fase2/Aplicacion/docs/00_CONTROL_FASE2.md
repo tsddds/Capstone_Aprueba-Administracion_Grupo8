@@ -45,4 +45,4 @@ Los registros de ejecuciones anteriores conservan su fecha en `evidencias`. La r
 
 ## Verificación del 8 de noviembre
 
-214 pruebas aprobadas, 0 fallos y 0 omitidas, más compilación del cliente. [Resultados](evidencias/verificacion-2026-11-08/resumen.json). Las capturas del informe conservan su fecha del 27/10. El flujo de GitHub Actions está configurado; su ejecución remota se consulta en Actions.
+214 pruebas aprobadas, 0 fallos y 0 omitidas, más compilación del cliente. [Resultados](evidencias/verificacion-2026-11-08/resumen.json). Las capturas del informe conservan su fecha del 27/10. La ejecución de [GitHub Actions](https://github.com/tsddds/Capstone_Aprueba-Administracion_Grupo8/actions/runs/42493493185) aprobó las 214 pruebas y la compilación. [Registro remoto](evidencias/verificacion-2026-11-08/ejecucion-github.json).

@@ -83,3 +83,5 @@ Completar los diarios 2.1 de Catalina y Felipe, realizar la revisión de pares y
 ## Presentación y verificación
 
 La [presentación de la tercera evaluación](Fase3/Evidencias_grupales/Presentacion/Aprueba_Evaluacion_3_2026-11-25.pptx) corresponde al 25/11/2026. La evaluación y la defensa de diciembre se siguen por separado. El flujo [Verificación del proyecto](.github/workflows/verificacion.yml) ejecuta la regresión mediante Docker cuando cambia la aplicación. Los resultados remotos se consultan en [Actions](https://github.com/tsddds/Capstone_Aprueba-Administracion_Grupo8/actions).
+
+Verificación remota del 08/11/2026: [GitHub Actions](https://github.com/tsddds/Capstone_Aprueba-Administracion_Grupo8/actions/runs/42493493185) completó 214 pruebas y la compilación, sin fallos.
