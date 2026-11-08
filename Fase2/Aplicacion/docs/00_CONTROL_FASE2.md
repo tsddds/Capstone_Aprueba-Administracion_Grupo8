@@ -1,6 +1,6 @@
 # Estado de Fase 2
 
-Actualización documental del 4 de noviembre de 2026. Corte técnico del 27 de octubre de 2026. Responsables: equipo Aprueba Administración.
+Actualización documental del 8 de noviembre de 2026. Corte técnico del 27 de octubre de 2026. Responsables: equipo Aprueba Administración.
 
 ## Implementación integrada
 
@@ -17,6 +17,13 @@ La [planilla grupal](seguimiento/01_Seguimiento_Grupal_Fase2.xlsx) reúne los 27
 El [informe final](informe-final/2.6_Informe_Final_Proyecto_APT_Aprueba_Administracion.docx) describe el desarrollo y sus evidencias según la guía 2.6. El PPT conserva el corte de la presentación del 20/10.
 
 Las pruebas de sincronización de precios se documentan con el proveedor simulado como alcance de la entrega académica. El [diario 2.1 de Tsung-Hao](../../Evidencias_individuales/Liu_Tsung-Hao_2.1_APT122_DiarioReflexionFase2.docx) ya está publicado.
+
+## Calendario académico vigente
+
+- Tercera evaluación de la asignatura y presentación de Fase 3 el 25 de noviembre de 2026.
+- Defensa final del proyecto de título en diciembre de 2026. El día se confirmará con la convocatoria.
+
+La preparación del 25 de noviembre y las correcciones posteriores para la defensa se siguen como hitos separados.
 
 ## Pendientes de cierre
 

@@ -2,7 +2,7 @@
 
 Proyecto Capstone del Grupo 8 de Ingeniería en Informática, Duoc UC, 2026. Integrantes: Tsung-Hao Liu, Catalina Padilla y Felipe Rojas.
 
-**Estado al 4 de noviembre de 2026: Fase 2 en desarrollo avanzado.** El equipo integró los tres bloques y comprobó la ejecución en Docker local. El corte del 27/10 registra 214 pruebas automatizadas aprobadas, sin fallos ni omisiones, y la compilación del cliente. El diario 2.1 de Tsung-Hao ya está publicado. Quedan los diarios de Catalina y Felipe, la validación remota y la revisión del equipo.
+**Estado al 8 de noviembre de 2026. Desarrollo integrado y preparación de la tercera evaluación del 25 de noviembre.** El equipo integró los tres bloques y comprobó la ejecución en Docker local. El corte del 27/10 registra 214 pruebas automatizadas aprobadas, sin fallos ni omisiones, y la compilación del cliente. El diario 2.1 de Tsung-Hao ya está publicado. Quedan los diarios de Catalina y Felipe, la validación remota y la revisión del equipo.
 
 ## Proyecto y alcance
 
@@ -17,6 +17,11 @@ El [contexto del proyecto](Fase2/Aplicacion/docs/22_CONTEXTO_Y_ALCANCE.md) reún
 - [Fase 2](Fase2/README.md): guía 2.4, informe 2.6 preparado, seis planillas, aplicación, pruebas, presentación y pendientes.
 
 Revisa las evidencias por tema en el [anexo de Fase 1](Fase1/Evidencias_grupales/anexo) y el [anexo de Fase 2](Fase2/Evidencias_grupales/anexo).
+
+## Próximas presentaciones
+
+- [Fase 3 y tercera evaluación](Fase3/README.md), el 25 de noviembre de 2026.
+- [Defensa final del proyecto de título](Defensa_final/README.md), en diciembre de 2026. Día pendiente de confirmación.
 
 ## Herramientas utilizadas
 
