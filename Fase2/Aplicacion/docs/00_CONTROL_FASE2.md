@@ -1,6 +1,6 @@
 # Estado de Fase 2
 
-Actualización documental del 8 de noviembre de 2026. Corte técnico del 27 de octubre de 2026. Responsables: equipo Aprueba Administración.
+Actualización documental del 8 de noviembre de 2026. Verificación técnica del 8 de noviembre de 2026. Responsables: equipo Aprueba Administración.
 
 ## Implementación integrada
 
@@ -42,3 +42,7 @@ La [guía de cierre](18_CIERRE_FASE2_Y_ENTREGA.md) contiene el procedimiento de 
 - [Persistencia de la prueba visual](evidencias/cierre-2026-10-27/persistencia-ui.json).
 
 Los registros de ejecuciones anteriores conservan su fecha en `evidencias`. La revisión documental no repite ni altera sus resultados. Vercel y Firebase remoto permanecen sin cambios en esta intervención.
+
+## Verificación del 8 de noviembre
+
+214 pruebas aprobadas, 0 fallos y 0 omitidas, más compilación del cliente. [Resultados](evidencias/verificacion-2026-11-08/resumen.json). Las capturas del informe conservan su fecha del 27/10. El flujo de GitHub Actions está configurado; su ejecución remota se consulta en Actions.

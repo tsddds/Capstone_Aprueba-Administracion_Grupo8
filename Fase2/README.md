@@ -21,3 +21,7 @@ Los informes, las planillas y las evidencias conservan lo registrado en su fecha
 Quedan los diarios 2.1 de Catalina y Felipe, la agenda remota y los servicios empresariales, la revisión de pares y la recepción en los otros computadores. También quedan la revisión académica y la entrega en la plataforma del curso. La publicación del avance no cierra estos puntos. Los procedimientos están en [la guía de cierre](Aplicacion/docs/18_CIERRE_FASE2_Y_ENTREGA.md).
 
 Los documentos de inicio y planificación siguen en Fase1. No se renombraron como entregables de Fase2. La visión del producto se actualizó el 28/10 con el alcance vigente y mantiene la revisión del equipo pendiente.
+
+## Actualización del 8 de noviembre
+
+Nueva regresión: 214 pruebas aprobadas y compilación correcta. Informe con resumen y abstract, guía 2.4 y seis planillas actualizados. La sincronización de precios se verifica con un proveedor simulado. La Gantt distingue la evaluación del 25/11 de la defensa de diciembre. Véase [el control vigente](Aplicacion/docs/00_CONTROL_FASE2.md).

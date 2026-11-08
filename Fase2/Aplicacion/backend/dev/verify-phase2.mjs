@@ -23,7 +23,7 @@ const records=[];
 const digest = p => readFile(path.join(root,p)).then(bytes=>createHash('sha256').update(bytes).digest('hex'));
 const sourceFiles=['backend/src/routes/corrections.js','backend/src/data/corrections.js','backend/src/data/admin-support.js','backend/src/services/metrics/job.js','backend/src/index.js','frontend/src/pages/Users.jsx','frontend/src/pages/Overview.jsx','frontend/src/i18n.js'];
 const sourceHashes=Object.fromEntries(await Promise.all(sourceFiles.map(async p=>[p,await digest(p)])));
-await writeFile(path.join(output,'fuente.json'),JSON.stringify({at:new Date().toISOString(),sourceHashes,externalStripe:false,emulator:'demo-aprueba-tests',note:'Árbol local con cambios sin publicar; los SHA identifican las fuentes probadas.'},null,2));
+await writeFile(path.join(output,'fuente.json'),JSON.stringify({at:new Date().toISOString(),sourceHashes,externalStripe:false,emulator:'demo-aprueba-tests',note:'Las huellas SHA-256 identifican los archivos probados. La sincronización de precios utiliza un proveedor simulado.'},null,2));
 for(const job of jobs){
  const startedAt=new Date().toISOString(); let log='';
  const exitCode=await new Promise((resolve,reject)=>{
@@ -40,5 +40,5 @@ for(const job of jobs){
  if(exitCode!==0){process.exitCode=exitCode;break;}
 }
 const completed=records.length===jobs.length&&records.every(r=>r.exitCode===0);
-const summary={completed,suites:records.length,expectedSuites:jobs.length,tests:records.reduce((s,r)=>s+r.tests,0),passed:records.reduce((s,r)=>s+r.pass,0),failed:records.reduce((s,r)=>s+r.fail,0),skipped:records.reduce((s,r)=>s+r.skipped,0),externalStripe:'PENDIENTE_CUENTA',humanAcceptance:'PENDIENTE'};
+const summary={completed,suites:records.length,expectedSuites:jobs.length,tests:records.reduce((s,r)=>s+r.tests,0),passed:records.reduce((s,r)=>s+r.pass,0),failed:records.reduce((s,r)=>s+r.fail,0),skipped:records.reduce((s,r)=>s+r.skipped,0),billingValidation:'PROVEEDOR_SIMULADO',externalStripe:'NO_REQUERIDO',humanAcceptance:'PENDIENTE'};
 await writeFile(path.join(output,'resumen.json'),JSON.stringify(summary,null,2));console.log(JSON.stringify(summary));

@@ -1,0 +1,12 @@
+{
+  "completed": true,
+  "suites": 22,
+  "expectedSuites": 22,
+  "tests": 214,
+  "passed": 214,
+  "failed": 0,
+  "skipped": 0,
+  "billingValidation": "PROVEEDOR_SIMULADO",
+  "externalStripe": "NO_REQUERIDO",
+  "humanAcceptance": "PENDIENTE"
+}
